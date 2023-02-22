@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+
+        <div class="left">
+            <div class="category">
+                <h2>Category</h2>
+                <button>Apple</button>
+                <hr>
+                <button>Avocado</button>
+                <hr>
+                <button>Banana</button>
+                <hr>
+                <button>Dates</button>
+                <hr>
+                <button>Pomegranate</button>
+            </div>
+            <div class="filters">
+                <div class="brand">
+                    <h2>Brand</h2>
+                    <label for="curate" class="filBrandLabel"> 
+                        <input type="checkbox" name="curate" id="" class="filBrand">
+                        Curate
+                    </label>
+
+                    <label for="solomon" class="filBrandLabel">
+                        <input type="checkbox" name="solomon" id="" class="filBrand">
+                        KING SOLOMON
+                    </label>
+
+                    <label for="delight" class="filBrandLabel">
+                        <input type="checkbox" name="delight" id="" class="filBrand">
+                        ROYAL DELIGHT 
+                    </label>
+
+                </div>
+                <div class="price">
+                    <h2>Price</h2>
+                    <input type="range" name="filterByPrice" id="filterByPrice" min="0" max="999">
+                    <hr>
+                    <h2>Discount</h2>
+                    <input type="range" name="filterByDiscount" id="filterByDiscount" min="0" max="70%">
+
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <h3 id="showing">Showing 20 of 263907 items</h3>
+                <select name="sort" id="sort">
+                    <option value="">All Products</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="desc">High to Low</option>
+                    <option value="asc">Low to High</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+
+            <div id="cardContainer">
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="allCat">
+            <h2>All Categories</h2>
+            <a href="#">Grocery</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Beauty</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Premium Fruits</a>
+            <a href="#">Books</a>
+            <a href="#">Furniture</a>
+        </div>
+        <div class="popCat">
+            <h2>Popular Categories</h2>
+            <a href="#">Staples</a>
+            <a href="#">Baverages</a>
+            <a href="#">Personal Care</a>
+            <a href="#">Home Care</a>
+            <a href="#">Fruits & Vegetables</a>
+            <a href="#">Baby Care</a>
+            <a href="#">Snack & Branded Foods</a>
+            <a href="#">Dairy & Bakery</a>
+        </div>
+        <div class="customerAcc">
+            <h2>Customer Account</h2>
+            <a href="#">My Account</a>
+            <a href="#">My Orders</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Payment Methods</a>
+            <a href="#">Delivery Addresses</a>
+            <a href="#">JioMart Wallet</a>
+        </div>
+        <div class="helpNSupp">
+            <h2>Help & Support</h2>
+            <a href="#">About Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="3">Privacy Policy</a>
+            <a href="#">E-waste Policy</a>
+            <a href="#">Cancellation & Return</a>
+            <a href="#">Shipping & Delivery Policy</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>WhatsApp us: ##### #####
+                Call us: #### ### ####
+                8:00 AM to 8:00 PM, 365 days</p>
+            <p>Please note that you are accessing the BETA version of <a href="index.html" class="linkMain">buddycart.com</a>
+            <h2>Download the app</h2>
+            <div class="dwnImg">
+                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/ios_app_icon.svg" alt="AppStore"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/google-play-icon.svg" alt="PlayStore">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./main.js"></script>
+</html>
