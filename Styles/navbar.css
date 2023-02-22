@@ -1,8 +1,7 @@
 #navbar-top{
     display: flex;
-    background-color:#67c3ef;
+    background-color:rgba(0,120,173,255);
     width: 100%;
-    border: 1px solid red;
     gap: 200px;
     align-items: center;
     justify-content: space-around;
@@ -19,8 +18,7 @@ height: 100px;
 margin-top: 3px;
 }
 #form{
-   
-    align-items: center;
+ align-items: center;
     justify-content: center;
 }
 #search{
@@ -52,7 +50,7 @@ border-radius: 50px;
 #navbar-bottom{
     display: flex;
     color: white;
-    background-color: #1380ed;
+    background-color: rgba(12,82,115,255);
     justify-content: space-between;
     width: 100%;
 }
