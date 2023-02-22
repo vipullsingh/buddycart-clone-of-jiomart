@@ -1,25 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
-*{
+
+* {
     font-family: 'Poppins', sans-serif;
 }
+
 header {
     width: 100%;
     height: 72px;
     background-color: #008ECC;
     /* padding: 50px; */
 }
-
-header>div>div>button {
-    border-radius: 25%;
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-
 header>div>div>img {
     width: 100%;
 }
@@ -39,7 +29,10 @@ header>div>div:nth-child(2) {
     /* border: 3px solid black; */
     width: 100%;
 }
-
+header>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>a:nth-child(1)>img{
+    height: 24px;
+    width: 24px;
+}
 header>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)>a>img {
     height: 20px;
     width: 125px;
@@ -193,13 +186,44 @@ header>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>div>a {
     width: 10%;
     /* border: 2px solid black; */
 }
-#signin{
+
+#signin {
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
     width: 80%;
     vertical-align: middle;
 }
-#signin>a:nth-child(2){
+
+#signin>a:nth-child(2) {
     padding-bottom: 5px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #0C5273;
+}
+nav>div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 40px;
+    background-color: #0C5273;
+    vertical-align: middle;
+}
+
+nav>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+
+}
+nav>div>div>a{
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: white;
 }
