@@ -69,11 +69,11 @@
 
 
 
-.bottom,.top,.card{
+.bottom,.top,.card1{
     display: flex;
     /* outline: 1px solid blue; */
 }
-.card{
+.card1{
     margin: 10px 0px;
 }
 .top img{
@@ -85,7 +85,7 @@
 .top{
     padding-top: 20px;
 }
-.card{
+.card1{
     flex-direction: column;
     
 }
@@ -124,7 +124,7 @@
     width: 20px;
     text-align: center;
 }
-.price{
+.price1{
     font-weight: 900;
     font-size: large;
     letter-spacing: 0.5px;
