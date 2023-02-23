@@ -12,63 +12,93 @@
 
         <div class="left">
             <div class="category">
-                <h2>Category</h2>
-                <button>Apple</button>
+                <h2>Electronics</h2>
+                <input type="submit" value="Mobile" data-val="mobile" class="filterBtn">
                 <hr>
-                <button>Avocado</button>
+                <input type="submit" value="Camera" data-val="camera" class="filterBtn">
                 <hr>
-                <button>Banana</button>
+                <input type="submit" value="Computers" data-val="computer" class="filterBtn">
                 <hr>
-                <button>Dates</button>
-                <hr>
-                <button>Pomegranate</button>
+                <input type="submit" value="TV" data-val="tv" class="filterBtn">
             </div>
-            <div class="filters">
-                <div class="brand">
-                    <h2>Brand</h2>
-                    <label for="curate" class="filBrandLabel"> 
-                        <input type="checkbox" name="curate" id="" class="filBrand">
-                        Curate
-                    </label>
-
-                    <label for="solomon" class="filBrandLabel">
-                        <input type="checkbox" name="solomon" id="" class="filBrand">
-                        KING SOLOMON
-                    </label>
-
-                    <label for="delight" class="filBrandLabel">
-                        <input type="checkbox" name="delight" id="" class="filBrand">
-                        ROYAL DELIGHT 
-                    </label>
-
-                </div>
-                <div class="price">
-                    <h2>Price</h2>
-                    <input type="range" name="filterByPrice" id="filterByPrice" min="0" max="999">
-                    <hr>
-                    <h2>Discount</h2>
-                    <input type="range" name="filterByDiscount" id="filterByDiscount" min="0" max="70%">
-
-                </div>
+            
+            <div class="category">
+                <h2>Foods & Edibles</h2>
+                <input type="submit" value="Staples" data-val="staple" class="filterBtn">
+                <hr>
+                <input type="submit" value="Bakery" data-val="bakery" class="filterBtn">
+                <hr>
+                <input type="submit" value="Dairy" data-val="dairy" class="filterBtn">
+                <hr>
+                <input type="submit" value="Baverages" data-val="baverages" class="filterBtn">
+                <hr>
+                <input type="submit" value="Fruits" data-val="fruits" class="filterBtn">
+            </div>
+            
+            <div class="category">
+                <h2>Female</h2>
+                <input type="submit" value="Women" data-val="women" class="filterBtn">
+                <hr>
+                <input type="submit" value="Girls" data-val="girls" class="filterBtn">
+                <hr>
+                <input type="submit" value="Make-up" data-val="makeup" class="filterBtn">
+                <hr>
+                <input type="submit" value="Hair" data-val="hair" class="filterBtn">
+                <hr>
+                <input type="submit" value="Fragrances" data-val="fragrances" class="filterBtn">
+                <hr>
+                <input type="submit" value="Skin Care" data-val="skin care" class="filterBtn">
+            </div>
+            
+            <div class="category">
+                <h2>Male</h2>
+                <input type="submit" value="Men" data-val="men" class="filterBtn">
+                <hr>
+                <input type="submit" value="Boys" data-val="boys" class="filterBtn">
+            </div>
+            
+            <div class="category">
+                <h2>Coins & Idols</h2>
+                <input type="submit" value="Gold Coins" data-val="gcoin" class="filterBtn">
+                <hr>
+                <input type="submit" value="Silver Coins" data-val="scoin" class="filterBtn">
+                <hr>
+                <input type="submit" value="Idols" data-val="idol" class="filterBtn">
+            </div>
+            
+            <div class="category">
+                <h2>Essentials & Not</h2>
+                <input type="submit" value="Essentials" data-val="essential" class="filterBtn">
+                <hr>
+                <input type="submit" value="Not Essentials" data-val="not-essential" class="filterBtn">
+            </div>
+            
+            <div class="price">
+                <h2>Price</h2>
+                <input type="range" name="filterByPrice" id="filterByPrice" min="0" max="999">
+                <hr>
+                <h2>Discount</h2>
+                <input type="range" name="filterByDiscount" id="filterByDiscount" min="0" max="70%">
             </div>
         </div>
         <div class="right">
             <div class="top">
-                <h3 id="showing">Showing 20 of 263907 items</h3>
+                <!-- <h3 id="showing">Showing 20 of 100 items</h3> -->
                 <select name="sort" id="sort">
                     <option value="">All Products</option>
                     <option value="desc">High to Low</option>
                     <option value="asc">Low to High</option>
-                    <option value="discount">Discount</option>
                 </select>
             </div>
 
             <div id="cardContainer">
                 
             </div>
-            <div class="pagination-wrapper" id="pagination-wrapper"></div>
         </div>
-        </div>
+    </div>
+    <hr> 
+    <div class="pagination-wrapper" id="pagination-wrapper"></div>
+    <hr> 
     </div>
     <footer>
         <div class="allCat">

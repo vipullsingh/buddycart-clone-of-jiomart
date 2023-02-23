@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/singleProduct.css">
+</head>
+<body>
+    <header class="header">
+        <!-- parent div -->
+        <div>
+            <!-- toggleKey -->
+            <div></div>
+            <!-- 2nd parent div for logo/search/signin -->
+            <div>
+                <div>
+                    <div>
+                        <!-- logo -->
+                        <a href="#">
+                            <img src="https://www.jiomart.com/assets/ds2web/jds-icons/hamburger-icon.svg" alt="" /></a>
+                        <a href="index.html">
+                            <img src="./graphics/0078AD (1).png" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <div>
+                            <a id="location" href="#" style="text-decoration: none; color: white">
+                                📍Deliver to
+                                <span class="delivery-location" style="font-weight: bold">Ranchi, 834001</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- searchbox -->
+                    <div class="search-container">
+                        <i class="fa fa-search search-icon"></i>
+                        <input type="text" placeholder="Search Your Item" class="search-box" />
+                        <div class="dropdown">
+                            <!-- <button class="dropbtn">Recent searches</button> -->
+                            <div class="dropdown-content">
+                                <a href="#">Search term 1</a>
+                                <a href="#">Search term 2</a>
+                                <a href="#">Search term 3</a>
+                            </div>
+                        </div>
+                        <i class="fa fa-key option-key"></i>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="cart.html"><img src="./graphics/cart1.png" alt="" /></a>
+                        </div>
+                        <div id="signin">
+                            <a href=""><span><img src="./graphics/user-icon.svg" alt="" /></span></a>
+                            <a style="text-decoration: none; color: white" href="signin.html">Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="singlePageContainer">
+        <div class="smallSidebar">
+            <img src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-0-202209160907.jpg" alt="image">
+            <img src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-1-202209160907.jpg" alt="image">
+        </div>
+        <div class="middleMain">
+            <img src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-0-202209160907.jpg" alt="image">
+            <button>Add to Cart</button>
+        </div>
+        <div class="allDetails">
+            <h3 id="itemName">Curate's Signature Fruit Box Premium Imported 1 Pack</h3>
+            <h2> <span id="itemPrice">999.00</span> <span id="discoutnt">16% Off</span></h2>
+            <p>M.R.P: <span id="itemMRP">1,100.00</span> (Incl. of all taxes)</p>
+            <hr>
+            <p id="">In Stock</p>
+            <p>Sold By <span class="blue">Reliance Retail</span></p>
+
+            <h2>Check Esstimated Delivery</h2>
+            <input id="pinSearchInput" type="text" placeholder="Enter the pincode EX.-829111">
+            <input id="pinSearchBtn" type="submit" value="Apply"> 
+            <p id="place"></p>
+            <p id="estimatedDate"></p>
+            <hr>
+            <h3>Description</h3>
+            <p id="description">The Curate's Signature box with 5 Premium Fruits - Avocado, Cherries, Blueberries, Citrus and Grapes is a spectacular mix of the most exclusive and exotic fruits. Get the exciting fruit box at a fantastic offer only on JioMart and relish the delicious Premium Fruits. Scoop the buttery Avocado flesh and spread it on a toast, the overly juicy and easy-peeled Mini Orange, the juicy and Sweetest Flame Grapes , sprinkle the Cherries and blueberries on your pan cakes and make deliciocus snacks. Indulge into these amazing fruits and make your everyday special. All your favourite fruits are also available individually on JioMart. Please refer to the respective descriptions for more details on the fruits' attributes, nutrition values and eating suggestions.</p>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="allCat">
+            <h2>All Categories</h2>
+            <a href="#">Grocery</a>
+            <a href="#">Electronics</a>
+            <a href="#">Fashion</a>
+            <a href="#">Beauty</a>
+            <a href="#">Home & Kitchen</a>
+            <a href="#">Premium Fruits</a>
+            <a href="#">Books</a>
+            <a href="#">Furniture</a>
+        </div>
+        <div class="popCat">
+            <h2>Popular Categories</h2>
+            <a href="#">Staples</a>
+            <a href="#">Baverages</a>
+            <a href="#">Personal Care</a>
+            <a href="#">Home Care</a>
+            <a href="#">Fruits & Vegetables</a>
+            <a href="#">Baby Care</a>
+            <a href="#">Snack & Branded Foods</a>
+            <a href="#">Dairy & Bakery</a>
+        </div>
+        <div class="customerAcc">
+            <h2>Customer Account</h2>
+            <a href="#">My Account</a>
+            <a href="#">My Orders</a>
+            <a href="#">Wishlist</a>
+            <a href="#">Payment Methods</a>
+            <a href="#">Delivery Addresses</a>
+            <a href="#">JioMart Wallet</a>
+        </div>
+        <div class="helpNSupp">
+            <h2>Help & Support</h2>
+            <a href="#">About Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="3">Privacy Policy</a>
+            <a href="#">E-waste Policy</a>
+            <a href="#">Cancellation & Return</a>
+            <a href="#">Shipping & Delivery Policy</a>
+        </div>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>WhatsApp us: ##### #####
+                Call us: #### ### ####
+                8:00 AM to 8:00 PM, 365 days</p>
+            <p>Please note that you are accessing the BETA version of <a href="index.html" class="linkMain">buddycart.com</a>
+            <h2>Download the app</h2>
+            <div class="dwnImg">
+                <img src="https://www.jiomart.com/assets/ds2web/jds-icons/ios_app_icon.svg" alt="AppStore"><img src="https://www.jiomart.com/assets/ds2web/jds-icons/google-play-icon.svg" alt="PlayStore">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./singleProduct.js"></script>
+</html>

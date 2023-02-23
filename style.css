@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -22,7 +22,8 @@
         }
         .right>.top{
             display: flex;
-            justify-content: space-between;
+            margin: 20px;
+            justify-content: flex-end;
             align-items: center;
         }
         .top>select{
@@ -54,7 +55,7 @@
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 30px;
-            border: 2px solid red;
+            /* border: 2px solid red; */
         }
 
         /* cards */
@@ -73,9 +74,17 @@
             cursor: pointer;
         }
         .card>img{
+            margin-top: 30px;
             align-self: center;
             border-radius: inherit;
-            width: 90%;
+            width: 80%;
+            transition: transform .2s;
+            overflow: hidden;
+        }
+        .card>img:hover{
+            /* width: 120%; */
+            transform: scale(1.2);
+            overflow: hidden;
         }
         .card>p{
             color: grey;
@@ -133,7 +142,7 @@
             border-radius: 20px;
             margin-top: 20px;
         }
-        .category button{
+        .category input[type=submit]{
             background-color: #fff;
             border: none;
             cursor: pointer;
@@ -194,4 +203,16 @@
         .dwnImg{
             display: flex;
             cursor: pointer;
+        }
+        #pagination-wrapper{
+            
+            width: 60%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .pagination-button{
+            margin: 10px 5px;
+            padding: 5px;
+            width: 70px;
         }
