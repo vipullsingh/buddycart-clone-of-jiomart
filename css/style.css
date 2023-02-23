@@ -140,12 +140,12 @@ header{
 
 
 
-
+/* ////hovererin */
 
 
 
 a {
-    font-size: 12px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -162,6 +162,7 @@ a {
 .nav-area ul {
     list-style: none;
     margin: 0;
+    margin-right: 10px;
 }
 
 .nav-area>ul>li {
@@ -211,6 +212,7 @@ a {
 }
 #container{
     display: flex;
+    
 }
 
 .left,.right{
