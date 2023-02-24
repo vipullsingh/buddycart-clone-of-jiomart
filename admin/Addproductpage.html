@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Landing Page</title>
-<link rel="stylesheet" href="./cssforsidebar.css">
+    <link rel="stylesheet" href="./cssforsidebar.css">
+
     <style>
-       
-.rightsection {
-    width: 78%;
-    text-align: start;
-  margin: 0px 20px 0px 20px ;
-  margin-left: 336px;
-  
-}
+        
+        .rightsection {
+            width: 78%;
+            text-align: start;
+          margin: 0px 20px 0px 20px ;
+          margin-left: 336px;
+          
+        }
+
 
         .rightsection>nav {
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -60,21 +62,11 @@
    .data-div{
     text-align: center;
    }
-   .ProductAddingdiv>form{
-   display: grid;
-   grid-template-columns: repeat(1,1fr);
- 
-   }
-   .ProductAddingdiv input{
-    font-size: 20px;
-    padding: 10px 0px 10px 0px ;
-   }
     </style>
 </head>
 
 <body>
     <div class="conatinerdiv">
-        <a href="./adminlandingpage.html"></a>
         <div class="leftsection">
             <a href=""><img id="bgcolor" src="../graphics/logo.png" alt=""></a>
             <button><a href="./orders.HTML">Orders</a></button>
@@ -82,9 +74,10 @@
             <button><a href="./DeleteProducts.html">Delete product</a></button>
             <button><a href="./TotalSales.html">Total Sales</a></button>
             <button><a href="./coustmerpage.html">Registered User</a></button>
+
         </div>
-        
-        <div class="rightsection">
+     
+            <div class="rightsection">
             <nav>
                 <div id="form">
                     <form action="">
@@ -98,31 +91,52 @@
                     <hr>
                     <h3>Adesh</h3>
                 </div>
-
             </nav>
-          <div class="ProductAddingdiv">
-            <form action="">
-            name:-<input type="text" placeholder="name">
-            <br>
-            Image:- <input type="text" placeholder="Image">
-            <br>
-            strikeprice:- <input type="number" name="" id="" placeholder="strikeprice">
-            <br>
-             price:- <input type="number" name="" id="" placeholder="price" >
-             <br>
-            stock:- <input type="text" name="" id="" placeholder="stock">
-            <br>
-            category:- <input type="text" name="" id="" placeholder="category">
-            <br>
-            <input type="submit" value="Add-Product">
-            </form>
-          </div>
+            <div class="data-div">
+               <h1>Product available</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Device Id</th>
+                            <th>Product Name</th>
+                            <th>Product Type</th>
+                            <th>Address</th>
+                            <th>Phone No</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>1788489</td>
+                        <td>Iphone 8</td>
+                        <td>Mobile</td>
+                        <td>Nagpur,Maharashtra</td>
+                        <td>8995965245</td>
+                        <td>Pending</td>
+                        <td>100000</td>
+                        <td><button class="tdbutton">Delete</button></td>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Device Id</th>
+                            <th>Product Name</th>
+                            <th>Product Type</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Delete</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+            </div>
+        </div>
+
+
 
     </div>
-
-
-
-    
 
 </body>
 
