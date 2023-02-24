@@ -254,7 +254,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 /* cards */
@@ -369,7 +369,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 /* cards */

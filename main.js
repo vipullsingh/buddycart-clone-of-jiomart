@@ -13,7 +13,17 @@ let price_high_to_low=`http://localhost:3000/data?_sort=price&_order=desc&_limit
 let price_without_sort=`http://localhost:3000/data?_limit=12&_page=`
 
 
-
+let btn = document.querySelectorAll(".filterBtn")
+btn.forEach(element => {
+    element.addEventListener("click",(e)=>{
+        e.preventDefault()
+        console.log(e.target.dataset.val)
+    })
+});
+// btn.addEventListener("click",(e)=>{
+//     e.preventDefault()
+//     console.log(e.target.dataset.val)
+// })
 function forapi(api){
     window.addEventListener("load",()=>{
         fetchAndRender()
@@ -21,9 +31,9 @@ function forapi(api){
 async function fetchAndRender(page=1){
     let response = await fetch(`${api}${page}`);
     let result = await response.json();
-    console.log(result);
+    // console.log(result);
     let totalpage=Math.ceil(itemcount/12)
-    console.log(totalpage)
+    // console.log(totalpage)
     paginationpagerenering(totalpage)
     // cardContainer.innerHTML = display(result[0].Electronic)
     // cardContainer.innerHTML = display(result.data)
