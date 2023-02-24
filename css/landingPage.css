@@ -1,6 +1,6 @@
 *{
      margin: 0%;
-    padding: 0%;
+    padding: 2px;
 }
 
 .slideshow-container {
@@ -284,12 +284,12 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(auto,1fr);
-    gap: .6% 1%;
-    width: 100%;
+    /* gap: .6% 1%; */
+    width: 85%;
     padding: 1%;
-    margin-top: 1%;
-    margin-left: 65px;
-
+    margin: 3.5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
   }
   */
   .bottom_div img{
@@ -303,11 +303,11 @@
     gap: .6% 1%;
     width: 100%;
     padding: 1%;
-    margin-top: 16%;
+    /* margin-top: 16%; */
     margin-bottom:100px ;
   }
   #bttm_div img{
-    width: 100%;
+    width: 95%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
