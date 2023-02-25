@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,52 +30,9 @@
   <!-- Template Stylesheet -->
   <link href="./css/style.css" rel="stylesheet">
 
+
+
   <style>
-        
-    .Input {
-        font-size: 20px;
-
-
-    }
-
-
-    .flex {
-        width: 20%;
-        display: flex;
-
-
-    }
-
-    #imgsize {
-        width: 50px;
-        height: 50px;
-    }
-
-    #form {
-
-        display: flex;
-        align-items: center;
-    }
-
-    table {
-        width: 100%;
-        text-align: center;
-    }
-
-    table,
-    th,
-    td {
-        border: inset;
-    }
-
-    .tdbutton {
-        color: red;
-    }
-
-    .data-div {
-        text-align: center;
-    }
-
     #columnchart_material{
       margin-left: 20px;
     }
@@ -115,7 +71,7 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a href="./index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+          <a href="./Dashboard.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
           <a href="./Addproductpage.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Add Products</a>
           <a href="./coustmerpage.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Registered
             Users</a>
@@ -208,6 +164,7 @@
           </div>
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+             
               <span class="d-none d-lg-inline-flex">John Doe</span>
             </a>
           
@@ -218,39 +175,55 @@
 
 
       <!-- Sale & Revenue Start -->
-      <div class="data-div">
-                
-                <div>
-                     <h1>Coustmer Registered </h1>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Mobile_Number</th>
-                                    <th>Email Id</th>
-                                   
-                                </tr>
-                            </thead>
-                            <tbody id="Tbodycoustmer">
-                                <!-- Append Here -->
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Mobile_Number</th>
-                                    <th>Email Id</th>
-                                   
-                                </tr>
-                            </tfoot>
-                        </table>
-                </div>
+      <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+         <h1>Yearly</h1>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-line fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Profit Margin</p>
+                <h6 class="mb-0">20%</h6>
+              </div>
             </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-bar fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Total Sale</p>
+                <h6 class="mb-0">2656 products</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-area fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Today Revenue in</p>
+                <h6 class="mb-0">₹20L</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+              <i class="fa fa-chart-pie fa-3x text-primary"></i>
+              <div class="ms-3">
+                <p class="mb-2">Total Registered Users</p>
+                <h6 class="mb-0">1M</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Sale & Revenue End -->
 
 
       <!-- Sales Chart Start -->
     
-    
+     <div>
+      <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+     </div>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
    
@@ -259,39 +232,33 @@
     <!-- Template Javascript -->
     <script src="./lib/main.js"></script>
 </body>
-<script>
-    let registeredusertable = document.getElementById("Tbodycoustmer")
 
-     fetch(`http://localhost:3000/RegisterUser`).then((res)=>res.json()).then((data)=>{
-        appenddata(data) 
-        console.log(data)
-     })
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 400000, 270000 , 100000],
+          ['2015', 1117000, 460000, 250000],
+          ['2016', 1000660, 500523, 300000],
+          ['2017', 2045369, 758964, 758963]
+        ]);
 
-    function appenddata(datafetched){
-        registeredusertable.innerHTML=""
-        registeredusertable.innerHTML=`
-            ${datafetched.map((item)=>getdata(
-                item.name,
-                item.email,
-                item.Mobile_No
-            )).join("")}
-        `
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          }
+        };
 
-    }
-  
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
-function getdata(name,email,mobile){
-  let tds=`<tr><td>${name}</td><td>${mobile}</td><td>${email}</td></tr>`
-return tds
-}
-
-
-
-
-</script>
-
-   
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
   
 
 </html>
