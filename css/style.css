@@ -5,6 +5,11 @@ body{
     box-sizing: border-box;
     
 }
+*{
+    margin: 0%;
+   padding: 0%;
+}
+
 body>div{
     padding-right: 40px;
 }
@@ -599,6 +604,12 @@ footer a:hover{
     text-decoration: none;
     color: #3293BD;
 }
-#signInDiv{
-    height: 342px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
