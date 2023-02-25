@@ -1,27 +1,6 @@
-// let cart = JSON.parse(localStorage.getItem("cart")) || []
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
-let cart=[
-    {
-        category:"staple",
-        id:1,
-        image: "https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg",
-        name: "Screw",
-        price: 50,
-        quantity: 9,
-        stock: "In Stock",
-        strikeprice: 55
-    },
-    {
-        category:"staple",
-        id:2,
-        image: "https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg",
-        name: "Screw",
-        price: 100,
-        quantity: 1,
-        stock: "In Stock",
-        strikeprice: 55
-    }
-]
+
 // console.log(cart)
 let products1=document.getElementById("products1")
 let order_total=document.querySelectorAll(".order-total")
