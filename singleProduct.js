@@ -16,8 +16,18 @@
             cart.push({...singleItem,quantity:1})
             localStorage.setItem("cart",JSON.stringify(cart))
             console.log("Added to the cart")
+            Swal.fire(
+                'Added to Cart!',
+                'You are one step ahead of buying the Product!',
+                'success'
+              )
         }else{
             console.log("Already Present in the cart")
+            Swal.fire(
+                'Item is already present in the cart!',
+                'Go to the cart page!',
+                'error'
+              )
         }
     })
 
