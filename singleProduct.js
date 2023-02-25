@@ -2,6 +2,46 @@
     let searchInput = document.getElementById("pinSearchInput")
     let display = document.getElementById("place")
     let estimatedDate = document.getElementById("estimatedDate")
+    let singleItem = JSON.parse(localStorage.getItem("singleProduct")) 
+    let mainContainer = document.querySelector(".singlePageContainer")
+
+    
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+    // console.log(singleItem)
+
+    let addBtn = document.getElementById("addBtn")
+    addBtn.addEventListener("click",()=>{
+        if(checkDuplicate(singleItem.id)){
+            cart.push({...singleItem,quantity:1})
+            localStorage.setItem("cart",JSON.stringify(cart))
+            console.log("Added to the cart")
+        }else{
+            console.log("Already Present in the cart")
+        }
+    })
+
+    let img1 = document.querySelector("#img1")
+    let img2 = document.querySelector("#img2")
+    let img3 = document.querySelector("#img3")
+
+    let itemName = document.getElementById("itemName")
+    let itemPrice = document.getElementById("itemPrice")
+    let discoutnt = document.getElementById("discoutnt")
+    let itemMRP = document.getElementById("itemMRP")
+
+    window.addEventListener("load",()=>{
+        img1.src = singleItem.image
+        img2.src = singleItem.image
+        img3.src = singleItem.image
+        itemName.textContent = singleItem.name
+        
+        itemPrice.textContent = `₹ ${singleItem.price}`
+        discoutnt.textContent = `${Math.floor((singleItem.strikeprice-singleItem.price)/singleItem.strikeprice*100)}% Off`
+        
+        itemMRP.textContent = singleItem.strikeprice;
+
+    })
 
     srcBtn.addEventListener("click",()=>{
         let toSearch = searchInput.value;
@@ -23,16 +63,35 @@
                 Date.prototype.addDays = function(days) {
                     let DOW = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
                     var date = new Date(this.valueOf());
-                    let res = ` <b>${date.getDate()}-${date.getMonth()+days}-${date.getFullYear()+1} (${DOW[date.getDay()]})</b>`
+                    if((date.getDay()+3)<7){
+                        var day = DOW[date.getDay()+3]
+                    }else{
+                        var day = DOW[Math.abs(7-(date.getDay()+3))]
+                    }
+                    console.log(day)
+                    let res = ` <b>${date.getDate()+days}-${date.getMonth()}-${date.getFullYear()+1} (${day})</b>`
                     return res;
                 }
 
                 var date = new Date();
 
-                estimatedDate.innerHTML = `Estimated delivery date is : ${date.addDays(2)}.`
+                estimatedDate.innerHTML = `Estimated delivery date is : ${date.addDays(3)}.`
                 }
             }).catch(err =>{
                 display.textContent = "Please Enter a correct Pin"
             })
         }
     })
+
+
+    function checkDuplicate(id){
+        // console.log(cart)
+        for(let i=0;i<cart.length;i++){
+            // console.log(cart[i])
+            if(cart[i].id == id){
+                return false
+            }
+        }
+        return true
+        }
+    

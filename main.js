@@ -2,8 +2,17 @@ let banner = ["https://www.jiomart.com/images/category/6047/premium-fruits-20220
 
 let baseURL = "http://localhost:3000/data";
 let itemcount;
-fetch(`${baseURL}`).then((res)=>res.json()).then((data)=>{console.log(data.length)
-    itemcount=data.length})
+let currData = null;
+let fetchedData = null;
+
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+fetch(`${baseURL}`).then((res)=>res.json()).then((data)=>{
+    fetchedData = data;
+    // console.log(fetchedData);
+    // console.log(data.length)
+    itemcount=data.length
+})
 let cardContainer = document.getElementById("cardContainer")
 
 
@@ -13,17 +22,7 @@ let price_high_to_low=`http://localhost:3000/data?_sort=price&_order=desc&_limit
 let price_without_sort=`http://localhost:3000/data?_limit=12&_page=`
 
 
-let btn = document.querySelectorAll(".filterBtn")
-btn.forEach(element => {
-    element.addEventListener("click",(e)=>{
-        e.preventDefault()
-        console.log(e.target.dataset.val)
-    })
-});
-// btn.addEventListener("click",(e)=>{
-//     e.preventDefault()
-//     console.log(e.target.dataset.val)
-// })
+
 function forapi(api){
     window.addEventListener("load",()=>{
         fetchAndRender()
@@ -37,24 +36,113 @@ async function fetchAndRender(page=1){
     paginationpagerenering(totalpage)
     // cardContainer.innerHTML = display(result[0].Electronic)
     // cardContainer.innerHTML = display(result.data)
+    currData = result;
     display(result)
+
 }
+
 fetchAndRender()
+let filterByPrice = document.getElementById("filterPrice")
+
+filterByPrice.addEventListener("change",()=>{
+    if(filterByPrice.value === ""){
+        display(result)
+    }else if(filterByPrice.value == 5000){
+        let filtered = currData.filter((ele)=>ele.price>5000)
+        paginationwrapper.innerHTML = null
+        display(filtered)    
+    }else{
+        let filtered = currData.filter((ele)=>ele.price<filterByPrice.value)
+        paginationwrapper.innerHTML = null
+        display(filtered)
+    }
+})
+let btn = document.querySelectorAll(".filterBtn")
+btn.forEach(element => {
+    element.addEventListener("click",(e)=>{
+        e.preventDefault()
+        let filtered = fetchedData.filter((el)=>(el.category === e.target.dataset.val))
+        console.log(filtered)
+        console.log(e.target.dataset.val)
+        paginationwrapper.innerHTML = null
+
+        display(filtered)
+    })
+});
+
+// `<div class="card">
+// <img src="${img}" alt="image">
+// <p>${name}</p>
+// <div class ="stPrice"><p> ₹${stPrice}</p> <h3> ₹${price}</h3> <p> ${Math.floor(((stPrice-price)/stPrice)*100)}% OFF</p></div>
+// <button class="elementToFadeInAndOut">Add +</button>
+// </div>
+// `
 function display(data){
     cardContainer.innerHTML = ""
-    cardContainer.innerHTML=`${data.map((elem)=> getcard(elem.name,elem.image,elem.price,elem.strikeprice)).join("")}`
+    data.forEach((elem,ind)=>{
+        let card = document.createElement("div")
+        card.className = "card"
+        let img = document.createElement("img")
+        img.src = elem.image
+
+        img.addEventListener("click",()=>{
+            localStorage.setItem("singleProduct", JSON.stringify(elem))
+            window.location.href="./singleProduct.html"
+        })
+
+        let p = document.createElement("p")
+        p.textContent = elem.name;
+
+        let div = document.createElement("div")
+        div.className = "stPrice"
+
+        let p2 = document.createElement('p')
+        p2.textContent = elem.strikeprice
+
+        let h3 = document.createElement("h3")
+        h3.textContent = elem.price
+
+        let p3 = document.createElement("p")
+        p3.textContent = Math.floor(((elem.strikeprice-elem.price)/elem.strikeprice)*100);
+
+        div.append(p2,h3,p3)
+
+        let button = document.createElement("button")
+        button.className = "elementToFadeInAndOut"
+        button.textContent = "Add +"
+
+        button.addEventListener("click",()=>{
+            if(checkDuplicate(elem.id)){
+                cart.push({...elem,quantity:1})
+                localStorage.setItem("cart",JSON.stringify(cart))
+                console.log("Added to the cart")
+            }else{
+                console.log("Already Present in the cart")
+            }
+        })
+
+        card.append(img,p,div,button)
+
+        cardContainer.append(card)
+    })
+
+
+
+    // cardContainer.innerHTML=`${data.map((elem)=> getcard(elem.name,elem.image,elem.price,elem.strikeprice)).join("")}`
     
 
     // cardContainer.innerHTML = AllCards
 }
 
-function getcard(name,img,price,stPrice){
-    return `<div class="card"><img src="${img}" alt="image">
-                <p>${name}</p>
-                <div class ="stPrice"><p> ₹${stPrice}</p> <h3> ₹${price}</h3> <p> ${Math.floor(((stPrice-price)/stPrice)*100)}% OFF</p></div>
-                <button class="elementToFadeInAndOut">Add +</button></div>
-            `
-}
+// function getcard(name,img,price,stPrice){
+//     return `<div class="card">
+//                 <img src="${img}" alt="image">
+//                 <p>${name}</p>
+//                 <div class ="stPrice"><p> ₹${stPrice}</p> <h3> ₹${price}</h3> <p> ${Math.floor(((stPrice-price)/stPrice)*100)}% OFF</p></div>
+//                 <button class="elementToFadeInAndOut">Add +</button>
+//             </div>
+//             `
+// }
 ///pagination 
 let paginationwrapper=document.getElementById("pagination-wrapper")
 function paginationpagerenering(pages){
@@ -71,7 +159,6 @@ function paginationpagerenering(pages){
     })
    }
   }
-
 }
   forapi(price_without_sort)
 let filter=document.getElementById("sort")
@@ -88,7 +175,16 @@ filter.addEventListener("change",(e)=>{
 })
 
 
-
+function checkDuplicate(id){
+    // console.log(cart)
+    for(let i=0;i<cart.length;i++){
+        // console.log(cart[i])
+        if(cart[i].id == id){
+            return false
+        }
+    }
+    return true
+    }
 
 
 // http://localhost:3000/data?_sort=price&_order=desc&_limit=12&_page=1
