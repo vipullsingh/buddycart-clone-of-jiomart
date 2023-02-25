@@ -21,13 +21,13 @@ function showcarddata(cart){
     for(let item of cart){
         totalprice+=item.price*item.quantity
     }
-    order_total.forEach((item)=>item.textContent=totalprice) 
+    order_total.forEach((item)=>item.textContent=Math.floor(totalprice)) 
 
 
 
     finalPrice=totalprice-Number(discount.innerText)
     
-    final_price.textContent=finalPrice
+    final_price.textContent=Math.floor(finalPrice) 
 
     products1.innerHTML=cardList
 }
