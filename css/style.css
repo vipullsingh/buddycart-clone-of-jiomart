@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
 body{
     overflow-x: hidden;
+    /* width: 100vw; */
+    box-sizing: border-box;
+    
+}
+body>div{
+    padding-right: 40px;
 }
 * {
     font-family: 'Poppins', sans-serif;
 }
 .MainCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
+    width: 95%;
 }
 header{
     display: flex;
