@@ -285,7 +285,7 @@
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(auto,1fr);
     /* gap: .6% 1%; */
-    width: 85%;
+    width: 100%;
     padding: 1%;
     margin: 3.5%;
     margin-top: 0%;
@@ -293,7 +293,7 @@
   }
   */
   .bottom_div img{
-    width: 100%;
+    width: 105%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   #bttm_div{
@@ -565,6 +565,7 @@ margin-top: 2%;
     }
     .headings{
       font-size: 14px;
+      /* margin-left: 50px; */
     }
     #Womens_Fashion{
       width: 100%;

@@ -21,7 +21,8 @@ body>div{
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    width: 95%;
+    width: 96%;
+    /* border: 2px solid black; */
 }
 header{
     display: flex;
