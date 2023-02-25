@@ -595,3 +595,10 @@ footer a:hover{
 #signupbutton{
     margin-top: 20px;
 }
+#alreadySignin{
+    text-decoration: none;
+    color: #3293BD;
+}
+#signInDiv{
+    height: 342px;
+}
