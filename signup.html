@@ -254,6 +254,7 @@
 </body>
 <script>
     const form = document.getElementById('signup-form');
+    const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const emailError = document.getElementById('email-error');
     const mobileInput = document.getElementById('mobile');
@@ -265,7 +266,12 @@
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-
+        let data = {
+            name : nameInput.value,
+            email : emailInput.value,
+            Mobile_No : mobileInput.value,
+            password : passwordInput.value
+        }
         // Validate email
         if (!emailInput.checkValidity()) {
             emailError.textContent = 'Please enter a valid email address.';
@@ -299,146 +305,51 @@
         }
 
         // Check if password is significantly different from previous passwords
-        const newPassword = passwordInput.value;
-        const isSignificantlyDifferent = previousPasswords.every(function (oldPassword) {
-            const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
-            return similarity < 0.5;
-        });
-        if (!isSignificantlyDifferent) {
-            passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
-            return;
-        } else {
-            passwordError.textContent = '';
-            previousPasswords.push(newPassword);
-        }
+        // const newPassword = passwordInput.value;
+        // const isSignificantlyDifferent = previousPasswords.every(function (oldPassword) {
+        //     const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
+        //     return similarity < 0.5;
+        // });
+        // if (!isSignificantlyDifferent) {
+        //     passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
+        //     return;
+        // } else {
+        //     passwordError.textContent = '';
+        //     previousPasswords.push(newPassword);
+        // }
 
         // Submit form
-        alert('Signup successful!');
-        location.href = 'signin.html';
+        console.log(data)
+        // alert('Signup successful!');
+        fetch("http://localhost:3000/RegisterUser",{
+            method : "POST",
+            headers : {
+                "Content-Type": "application/json"
+            },
+            body : JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {console.log("success",result)})
+        .catch(err => console.log(JSON.stringify(err)))
+        // postData("http://localhost:3000/RegisterUser",data)
+        // location.href = 'signin.html';
     });
+
+
+
+//     async function postData(url = "", data = {}) {
+//   // Default options are marked with *
+//     const response = await fetch(url, {
+//         method: "POST", // *GET, POST, PUT, DELETE, etc.
+//          headers: {
+//         "Content-Type": "application/json",
+//         // 'Content-Type': 'application/x-www-form-urlencoded',
+//         },
+//         // redirect: "follow", // manual, *follow, error
+//         body: JSON.stringify(data), // body data type must match "Content-Type" header
+//     });
+//     return response.json(); // parses JSON response into native JavaScript objects
+//     }
 </script>
-<!-- <script>
-    const form = document.getElementById('signup-form');
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('email-error');
-    const mobileInput = document.getElementById('mobile');
-    const mobileError = document.getElementById('mobile-error');
-    const passwordInput = document.getElementById('password');
-    const passwordError = document.getElementById('password-error');
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
-    let previousPasswords = [];
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Validate email
-        if (!emailInput.checkValidity()) {
-            emailError.textContent = 'Please enter a valid email address.';
-            return;
-        } else {
-            emailError.textContent = '';
-        }
-
-        // Validate mobile number
-        if (!mobileInput.checkValidity() || mobileInput.value.length !== 10) {
-            mobileError.textContent = 'Please enter a valid 10-digit mobile number.';
-            return;
-        } else {
-            mobileError.textContent = '';
-        }
-        // Validate password
-        if (!passwordRegex.test(passwordInput.value)) {
-            passwordError.textContent = `Please enter a valid Password`;
-            return;
-        } else {
-            passwordError.textContent = '';
-        }
-
-        // Check if password is significantly different from previous passwords
-        const newPassword = passwordInput.value;
-        const isSignificantlyDifferent = previousPasswords.every(function (oldPassword) {
-            const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
-            return similarity < 0.5;
-        });
-        if (!isSignificantlyDifferent) {
-            passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
-            return;
-        } else {
-            passwordError.textContent = '';
-            previousPasswords.push(newPassword);
-        }
-
-        // Submit form
-        alert('Signup successful!');
-        form.reset();
-    });
-
-</script> -->
-<!-- <script>
-    const form = document.getElementById('signup-form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const emailError = document.getElementById('email-error');
-const mobileInput = document.getElementById('mobile');
-const mobileError = document.getElementById('mobile-error');
-const passwordInput = document.getElementById('password');
-const passwordError = document.getElementById('password-error');
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
-let previousPasswords = [];
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  console.log("signupclicked")
-  // Validate name
-  console.log(nameInput.value)
-  if (nameInput.value.trim() === '') {
-    alert('Please enter your name.');
-    return;
-  }
-  
-  // Validate email
-  if (!emailInput.checkValidity()) {
-    emailError.textContent = 'Please enter a valid email address.';
-    return;
-  } else {
-    emailError.textContent = '';
-  }
-  
-  // Validate mobile number
-  if (!mobileInput.checkValidity() || mobileInput.value.length !== 10) {
-    mobileError.textContent = 'Please enter a valid 10-digit mobile number.';
-    return;
-  } else {
-    mobileError.textContent = '';
-  }
-  
-  // Validate password
-  if (!passwordRegex.test(passwordInput.value)) {
-    passwordError.textContent = 'Please enter a password that meets the required criteria.';
-    return;
-  } else {
-    passwordError.textContent = '';
-  }
-  
-  // Check if password is significantly different from previous passwords
-  const newPassword = passwordInput.value;
-  const isSignificantlyDifferent = previousPasswords.every(function(oldPassword) {
-    const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
-    return similarity < 0.5;
-  });
-  if (!isSignificantlyDifferent) {
-    passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
-    return;
-  } else {
-    passwordError.textContent = '';
-    previousPasswords.push(newPassword);
-  }
-  
-  // Submit form
-  alert('Signup successful!');
-  form.reset();
-});
-
-</script> -->
 
 </html>
