@@ -1,6 +1,25 @@
 {
   "data": [
     {
+      "id": 1,
+      "name": "Good Life Sugar (M) 1 kg",
+      "image": "https://www.jiomart.com/images/product/600x600/491551493/good-life-sugar-m-1-kg-product-images-o491551493-p491551493-0-202204281542.jpg",
+      "strikeprice": 55,
+      "price": 46,
+      "stock": "In stock",
+      "category": "staple"
+    },
+    {
+      "id": 2,
+      "name": "Sunfeast Dark Fantasy Choco Fills Cookies 75 g",
+      "image": "https://www.jiomart.com/images/product/600x600/490762566/sunfeast-dark-fantasy-choco-fills-cookies-75-g-product-images-o490762566-p490762566-0-202206071739.jpg",
+      "strikeprice": 40,
+      "price": 30,
+      "stock": "In stock",
+      "category": "bakery"
+    },
+    {
+
       "id": 3,
       "name": "Daawat Devaaya Basmati Rice 1 kg",
       "image": "https://www.jiomart.com/images/product/600x600/490005639/daawat-devaaya-basmati-rice-1-kg-product-images-o490005639-p490005639-0-202205172326.jpg",
@@ -10,6 +29,26 @@
       "category": "staple"
     },
     {
+
+      "id": 4,
+      "name": "Maggi 2-Minute Masala Instant Noodles 560 g",
+      "image": "https://www.jiomart.com/images/product/600x600/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-0-202203150702.jpg",
+      "strikeprice": 105,
+      "price": 90,
+      "stock": "In stock",
+      "category": "bakery"
+    },
+    {
+      "id": 5,
+      "name": "Amul Butter 500 g (Carton)",
+      "image": "https://www.jiomart.com/images/product/600x600/490001392/amul-butter-500-g-carton-product-images-o490001392-p490001392-0-202203152128.jpg",
+      "strikeprice": 255,
+      "price": 245,
+      "stock": "In stock",
+      "category": "dairy"
+    },
+    {
+
       "id": 6,
       "name": "Amul Fresh Paneer 200 g (Pack)",
       "image": "https://www.jiomart.com/images/product/600x600/490174895/amul-fresh-paneer-200-g-pack-product-images-o490174895-p490174895-0-202203170432.jpg",
@@ -75,6 +114,17 @@
       "category": "staple"
     },
     {
+
+      "id": 13,
+      "name": "Britannia Toastea Premium Bake Rusk 182 g",
+      "image": "https://www.jiomart.com/images/product/600x600/490007738/britannia-toastea-premium-bake-rusk-182-g-product-images-o490007738-p490007738-0-202203170920.jpg",
+      "strikeprice": 35,
+      "price": 29,
+      "stock": "In stock",
+      "category": "bakery"
+    },
+    {
+
       "id": 14,
       "name": "Parle Elaichi Rusk 400 g",
       "image": "https://www.jiomart.com/images/product/600x600/491419181/parle-elaichi-rusk-400-g-product-images-o491419181-p491419181-0-202203150801.jpg",
@@ -1036,154 +1086,16 @@
       "price": 834,
       "stock": "In stock",
       "category": "fragrances"
-    },
-    {
-      "name": "Adesh",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8kIqAMD65F9fxS9SDG2kwhls3YtjCzLP7XUHglE7Lig&usqp=CAU&ec=48600113",
-      "strikeprice": "1000",
-      "price": "740",
-      "stock": "In stcok",
-      "category": "",
-      "id": 121
     }
   ],
   "RegisterUser": [
     {
-      "name": "Rcocky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 6666778901
-    },
-    {
-      "name": "Adesh",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 888889999
-    },
-    {
-      "name": "Chunnu",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 8888895928
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    },
-    {
-      "name": "Sanky",
-      "password": "$4527420",
-      "email": "adeshtayde6@gmail.com",
-      "Mobile_No": 9999912345
-    }
-  ],
-  "checkout":[
-    {
-      "Product":["Mobile","laptop","Home appliances","Furnitures"],
-       "Quantity":[1,2,3,4], 
-      "OrderNO":"14255122",
-      "Address":"Nagpur,Maharashtra",
-      "TotalAmount":47857,
-      "OrderStatus":"Succesful"
-      
-    },
-    {
-      "Product":["Mobile","laptop","Home appliances","Furnitures"],
-       "Quantity":[1,2,3,4], 
-      "OrderNO":"14255122",
-      "Address":"Nagpur,Maharashtra",
-      "TotalAmount":47857,
-      "OrderStatus":"Succesful"
-      
-    },
-    {
-      "Product":["Mobile","laptop","Home appliances","Furnitures"],
-       "Quantity":[1,2,3,4], 
-      "OrderNO":"14255122",
-      "Address":"Nagpur,Maharashtra",
-      "TotalAmount":47857,
-      "OrderStatus":"Succesful"
-      
-    },
-    {
-      "Product":["Mobile","laptop","Home appliances","Furnitures"],
-       "Quantity":[1,2,3,4], 
-      "OrderNO":"14255122",
-      "Address":"Nagpur,Maharashtra",
-      "TotalAmount":47857,
-      "OrderStatus":"Succesful"
-      
-    },
-    {
-      "Product":["Mobile","laptop","Home appliances","Furnitures"],
-       "Quantity":[1,2,3,4], 
-      "OrderNO":"14255122",
-      "Address":"Nagpur,Maharashtra",
-      "TotalAmount":47857,
-      "OrderStatus":"Succesful"
-      
+      "name": "Vipul Kumar",
+      "email": "vipul.kr.vks@gmail.com",
+      "Mobile_No": "9845994499",
+      "password": "Ahdfj@uyk6756",
+      "id": 1
+
     }
   ]
 }

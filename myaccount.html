@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buy Grocery Online at Best Prices Pan India</title>
+    <link rel="stylesheet" href="./css/myaccount.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/singleProduct.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/landingPage.css">
+
+
 </head>
 <body>
+    <!-- nav goes here -->
     <header>
         <div id="headWrapper">
             <div id="leftcontent">
@@ -160,50 +160,82 @@
               </li>
           </ul>
       </nav>
-    
-    <div class="singlePageContainer">
-        <div class="smallSidebar">
-            <img id="img1" src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-0-202209160907.jpg" alt="image">
-            <img id="img2" src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-1-202209160907.jpg" alt="image">
-        </div>
-        <div class="middleMain">
-            <img id="img3" src="https://www.jiomart.com/images/product/420x420/599991469/3-dates-2-go-medjoul-king-solomon-premium-imported-3-pcs-product-images-o599991469-p592846374-0-202209160907.jpg" alt="image">
-            <button id="addBtn">Add to Cart</button>
-        </div>
-        <div class="allDetails">
-            <h3 id="itemName">Curate's Signature Fruit Box Premium Imported 1 Pack</h3>
-
-            <h2> <span id="itemPrice">₹999.00</span> <span id="discoutnt">16% Off</span></h2>
-
-            <p>M.R.P: <span id="itemMRP">₹1,100.00</span> (Incl. of all taxes)</p>
-
-            <hr>
-
-            <p id="">In Stock</p>
-
-            <p>Sold By <span class="blue">Reliance Retail</span></p>
-
-            <h2>Check Esstimated Delivery</h2>
-
-            <input id="pinSearchInput" type="text" placeholder="Enter the pincode EX.-829111">
-
-            <input id="pinSearchBtn" type="submit" value="Apply"> 
-            <p id="place"></p>
-
-            <p id="estimatedDate"></p>
-            <hr>
-
-            <h3>Description</h3>
-
-            <p id="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis illo, dolores ab repellendus ea voluptas eum eius exercitationem officia mollitia doloribus repellat quaerat illum reprehenderit. Quibusdam, repudiandae nobis? Libero est quasi iste veniam quisquam commodi error nulla sed fugit. Ratione laboriosam nisi quas beatae inventore nulla harum laudantium minus dignissimos, iusto praesentium asperiores suscipit. Architecto nostrum aperiam deleniti facere dolore ipsum suscipit harum temporibus soluta impedit culpa laudantium, ab maxime, consectetur odio et obcaecati reiciendis cum ratione iusto eligendi ut voluptatibus eius. Nemo nesciunt dolores dignissimos? Recusandae nulla, ipsa asperiores quia temporibus hic. Est veniam voluptatem sunt ea vel explicabo.</p>
+    <div id="myaccount-div">
+        <h1>My Account</h1>
+        <div id="grid_section">
+            <div id="left">
+                <div id="profile">
+                    <div>
+                        <img src="./graphics/icons8-customer-100.png" alt="">
+                    </div>
+                    <div>
+                        <h5 id="name">Shubham Adhya</h5>
+                        <p id="mail">shubhamadhya@gmail.com</p>
+                        <p id="phoneNumber">+91-7980652143</p>
+                    </div>
+                    <div>
+                        <button id="toProfile">></button>
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.jiomart.com/assets/ds2web/jds-icons/my-order-icon.svg" alt="">
+                    <a href="">My Orders</a>
+                </div>
+                <div>
+                    <img src="https://www.jiomart.com/assets/ds2web/jds-icons/my-list-viewicon.svg" alt="">
+                    <a href="">My List</a>
+                </div>
+                <div>
+                    <img src="	https://www.jiomart.com/assets/ds2web/jds-icons/wishlist-icon.svg" alt="">
+                    <a href="">Wishlist</a>
+                </div>
+                <div>
+                    <img src="https://www.jiomart.com/assets/ds2web/jds-icons/pancard.svg" alt="">
+                    <a href="">PAN Card Information</a>
+                </div>
+                <div>
+                    <img src="https://www.jiomart.com/assets/ds2web/jds-icons/location.svg" alt="">
+                    <a href="">Delivery Addresses</a>
+                </div>
+                <div>
+                    <img src="	https://www.jiomart.com/assets/ds2web/jds-icons/faqs-icon.svg" alt="">
+                    <a href="">Need Help</a>
+                </div>
+                <div>
+                    <img src="	https://www.jiomart.com/assets/ds2web/jds-icons/legal.svg" alt="">
+                    <a href="">Legal Information</a>
+                </div>
+                <div>
+                    <img src="./graphics/icons8-logout-rounded-up-32.png" alt="">
+                    <a href="">Sign Out</a>
+                </div>
+            </div>
+            <div id="right">
+                <h3>Saved Addresses</h3>
+                <div id="address-grid">
+                    <div id="address-card">
+                        <h5>Shubham Adhya</h5>
+                        <p>18, R.N.Road Subhasgram, Near Subhasgram Municipal Market,
+                            South 24 Parganas 700147, West Bengal
+                            Phone: 7980652143</p>
+                    </div>
+                    <div id="address-card">
+                        <h5>Shubham Adhya</h5>
+                        <p>18, R.N.Road Subhasgram, Near Subhasgram Municipal Market,
+                            South 24 Parganas 700147, West Bengal
+                            Phone: 7980652143</p>
+                    </div>
+                </div>
+                <div >
+                    <button id="add-new-address">Add New Address</button>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-    <footer>
+    <!-- footer goes here -->
+    <footer style="margin-top: 30px;">
         <div class="allCat">
-            <h2>All Categories</h2>
+            <h3>All Categories</h3>
             <a href="#">Grocery</a>
             <a href="#">Electronics</a>
             <a href="#">Fashion</a>
@@ -214,7 +246,7 @@
             <a href="#">Furniture</a>
         </div>
         <div class="popCat">
-            <h2>Popular Categories</h2>
+            <h3>Popular Categories</h3>
             <a href="#">Staples</a>
             <a href="#">Baverages</a>
             <a href="#">Personal Care</a>
@@ -225,7 +257,7 @@
             <a href="#">Dairy & Bakery</a>
         </div>
         <div class="customerAcc">
-            <h2>Customer Account</h2>
+            <h3>Customer Account</h3>
             <a href="#">My Account</a>
             <a href="#">My Orders</a>
             <a href="#">Wishlist</a>
@@ -234,7 +266,7 @@
             <a href="#">JioMart Wallet</a>
         </div>
         <div class="helpNSupp">
-            <h2>Help & Support</h2>
+            <h3>Help & Support</h3>
             <a href="#">About Us</a>
             <a href="#">FAQ</a>
             <a href="#">Terms & Conditions</a>
@@ -244,10 +276,10 @@
             <a href="#">Shipping & Delivery Policy</a>
         </div>
         <div class="contact">
-            <h2>Contact Us</h2>
-            <p>WhatsApp us: ##### #####
-                Call us: #### ### ####
-                8:00 AM to 8:00 PM, 365 days</p>
+            <h3>Contact Us</h3>
+            <p style="font-size: 15px;">WhatsApp us: +916546448944</p>
+                <p>Call us: +91 1800 245 145</p>
+                <p>8:00 AM to 8:00 PM, 365 days</p>
             <p>Please note that you are accessing the BETA version of <a href="index.html" class="linkMain">buddycart.com</a>
             <h2>Download the app</h2>
             <div class="dwnImg">
@@ -256,5 +288,4 @@
         </div>
     </footer>
 </body>
-<script src="./singleProduct.js"></script>
 </html>

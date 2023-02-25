@@ -44,7 +44,7 @@
                         <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
                     </div>
                     <div id="signinWrapper">
-                        <a href="signin.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                        <a href="signup.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
                     </div>
                 </div>
             </div>
@@ -161,41 +161,45 @@
             <div id="left">
                 <div>
                     <h3>Groceries Basket</h3>
-                    <h3 class="order-total">₹0.00</h3>
+                    <h3>₹<span class="order-total">0.00</span></h3>
                 </div>
                 <div>
                     <img src="./graphics/icons8-percentage-32.png" alt="">
                     <p>Shop products worth ₹1499 & get extra 10% off on cart total(Offer is applicable only on products sold by Buddycart Retail . For specific exclusions & offer details refer T&C)</p>
                 </div>
-                <!-- append products here -->
-                <div class="card1">
-
-
-                    <div class="top">
-                        <div class="image-container">
-                            <img src="https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg">
+                
+            
+                <div id="products1">
+                    <!-- append products here -->
+                    <!-- <div class="card1">
+                        <div class="top">
+                            <div class="image-container">
+                                <img src="https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg">
+                            </div>
+                            <div class="product-details">
+                                <h4>Everest Green Stainless Steel Lighter</h4>
+                                <p>₹<span class="price1">59</span> <span class="sprice">₹99</span></p>
+                                <p>Sold By: Buddycart Retail</p>
+                            </div>
                         </div>
-                        <div class="product-details">
-                            <h4>Everest Green Stainless Steel Lighter</h4>
-                            <p>₹<span class="price1">59</span> <span class="sprice">₹99</span></p>
-                            <p>Sold By: Buddycart Retail</p>
+    
+                        <div class="bottom">
+                            <div>
+                                <a href="#" class="save-for-later">Save for Later</a>
+                            </div>
+                            <div class="quantity-manage">
+                                <button>-</button>
+                                <p>1</p>
+                                <button>+</button>
+                                <button class="remove">x</button>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="bottom">
-                        <div>
-                            <a href="#" class="save-for-later">Save for Later</a>
-                        </div>
-                        <div class="quantity-manage">
-                            <button>-</button>
-                            <p>1</p>
-                            <button>+</button>
-                            <button class="remove">x</button>
-                        </div>
-                    </div>
-
-
+                    </div> -->
+                    
                 </div>
+                
+
+                
             </div> 
             <div id="right">
                 <div id="CRP">
@@ -218,7 +222,9 @@
                         <button>View All</button>
                     </div>
                     <div>
-                        <input type="text" placeholder="Enter Coupon Code">
+                        <form action="" id="couponForm">
+                            <input type="text" placeholder="Enter Coupon Code" type="submit" id="Coupon">
+                        </form>
                     </div>
                 </div>
                 <div id="payment-details">
@@ -231,19 +237,19 @@
                     </div>
                     <div>
                         <h5>MRP Total</h5>
-                        <p class="order-total">₹0.00</p>
+                        <p>₹<span class="order-total">0.00</span></p>
                     </div>
                     <div>
                         <h5>Product Discount</h5>
-                        <p>₹0.00</p>
+                        <p>₹<span id="discount">0.00</span></p>
                     </div>
                     <div>
-                        <h5>delivery Fee</h5>
+                        <h5>Delivery Fee</h5>
                         <p>Free</p>
                     </div>
                     <div>
                         <h5>Total</h5>
-                        <p>₹0.00</p>
+                        <p>₹<span id="final_price">0.00</span></p>
                     </div>
                 </div>
                 <div>
@@ -254,4 +260,6 @@
     </div>
 </body>
 </html>
+
+<script src="./src/cart.js"></script>
 

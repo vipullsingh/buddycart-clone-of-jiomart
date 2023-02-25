@@ -51,10 +51,22 @@ filterByPrice.addEventListener("change",()=>{
         let filtered = currData.filter((ele)=>ele.price>5000)
         paginationwrapper.innerHTML = null
         display(filtered)    
-    }else{
-        let filtered = currData.filter((ele)=>ele.price<filterByPrice.value)
+    }else if(filterByPrice.value == 100){
+        let filtered = currData.filter((ele)=>ele.price<100)
         paginationwrapper.innerHTML = null
-        display(filtered)
+        display(filtered)    
+    }else if(filterByPrice.value == 1000){
+        let filtered = currData.filter((ele)=>ele.price>=100 && ele.price<1000)
+        paginationwrapper.innerHTML = null
+        display(filtered)    
+    }else if(filterByPrice.value == 3000){
+        let filtered = currData.filter((ele)=>ele.price>=1000 && ele.price<3000)
+        paginationwrapper.innerHTML = null
+        display(filtered)    
+    }else if(filterByPrice.value == 4999){
+        let filtered = currData.filter((ele)=>ele.price>=3000 && ele.price<5000)
+        paginationwrapper.innerHTML = null
+        display(filtered)    
     }
 })
 let btn = document.querySelectorAll(".filterBtn")
@@ -97,13 +109,13 @@ function display(data){
         div.className = "stPrice"
 
         let p2 = document.createElement('p')
-        p2.textContent = elem.strikeprice
+        p2.textContent = `₹${elem.strikeprice}`
 
         let h3 = document.createElement("h3")
-        h3.textContent = elem.price
+        h3.textContent = `₹${elem.price}`
 
         let p3 = document.createElement("p")
-        p3.textContent = Math.floor(((elem.strikeprice-elem.price)/elem.strikeprice)*100);
+        p3.textContent = `${Math.floor(((elem.strikeprice-elem.price)/elem.strikeprice)*100)}% Off`;
 
         div.append(p2,h3,p3)
 
@@ -116,8 +128,18 @@ function display(data){
                 cart.push({...elem,quantity:1})
                 localStorage.setItem("cart",JSON.stringify(cart))
                 console.log("Added to the cart")
+                Swal.fire(
+                    'Added to Cart!',
+                    'You are one step ahead of buying the Product!',
+                    'success'
+                )
             }else{
                 console.log("Already Present in the cart")
+                Swal.fire(
+                    'Item is already present in the cart!',
+                    'Go to the cart page!',
+                    'error'
+                )
             }
         })
 
