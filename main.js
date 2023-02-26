@@ -208,5 +208,4 @@ function checkDuplicate(id){
     return true
     }
 
-
 // http://localhost:3000/data?_sort=price&_order=desc&_limit=12&_page=1
