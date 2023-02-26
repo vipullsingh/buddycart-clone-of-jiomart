@@ -20,7 +20,7 @@ form.addEventListener("submit",(e)=>{
         let token = false
         for(let i=0;i<data.length;i++){
             if(data[i].email === dataInput.email && data[i].password === dataInput.password){
-                alert(`Welcome ${data[i].name}`)
+                // alert(`Welcome ${data[i].name}`)
                 token = true;
                 localStorage.setItem("signedOn",JSON.stringify(data[i]))
                 let fName = data[i].name.split(' ')[0]

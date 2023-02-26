@@ -32,21 +32,54 @@ async function fetchAndRender(page=1){
     display(result)
 }
 fetchAndRender()
+let showing=document.getElementById("showing")
 function display(data){
     cardContainer.innerHTML = ""
-    cardContainer.innerHTML=`${data.map((elem)=> getcard(elem.name,elem.image,elem.price,elem.strikeprice)).join("")}`
-    
-
-    // cardContainer.innerHTML = AllCards
+    showing.innerHTML=""
+    // cardContainer.innerHTML=`${data.map((elem)=> getcard(elem.name,elem.image,elem.price,elem.strikeprice)).join("")}` // cardContainer.innerHTML = AllCards
+   data.forEach(elem => {
+    let card=document.createElement("div")
+    card.setAttribute("class","card")
+    let pname=document.createElement("p")
+    let divprice=document.createElement("div")
+    let h3divstprice=document.createElement("h3")
+    let img=document.createElement("img")
+    img.src=elem.image
+    let pdivst1=document.createElement("p")
+    let pdivst2=document.createElement("p")
+     divprice.setAttribute("class","stprice")
+     pdivst1=elem.strikeprice;
+     pdivst2=`${Math.floor(((elem.strikeprice-elem.price)/elem.strikeprice)*100)}% OFF`
+     divprice.append(pdivst1,h3divstprice,pdivst2)
+     pname.innerText=elem.name;
+     let button=document.createElement("button");
+     button.setAttribute("class","elementToFadeInAndOut")
+     button.innerText=`Delete`
+     button.addEventListener("click",()=>{
+     functionfordeletereq(elem)
+     })
+     card.append(pname,img,divprice,button)
+     cardContainer.append(card)
+   });
+   showing.innerText=`Products in a page ${data.length}`
 }
 
-function getcard(name,img,price,stPrice){
-    return `<div class="card"><img src="${img}" alt="image">
-                <p>${name}</p>
-                <div class ="stPrice"><p> ₹${stPrice}</p> <h3> ₹${price}</h3> <p> ${Math.floor(((stPrice-price)/stPrice)*100)}% OFF</p></div>
-                <button class="elementToFadeInAndOut">Delete </button></div>
-            `
+
+function functionfordeletereq(elem){
+    fetch(`http://localhost:3000/data/${elem.id}`,{
+        method:"DELETE",
+        headers:{
+            "Content-Type":"application/json"
+        },
+    })
 }
+// function getcard(name,img,price,stPrice){
+//     return `<div class="card"><img src="${img}" alt="image">
+//                 <p>${name}</p>
+//                 <div class ="stPrice"><p> ₹${stPrice}</p> <h3> ₹${price}</h3> <p> ${Math.floor(((stPrice-price)/stPrice)*100)}% OFF</p></div>
+//                 <button class="elementToFadeInAndOut">Delete </button></div>
+//             `
+// }
 ///pagination 
 let paginationwrapper=document.getElementById("pagination-wrapper")
 function paginationpagerenering(pages){
