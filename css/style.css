@@ -621,3 +621,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+.search-container{
+    display: flex;
+    align-items: center;
+}
+.search-container span{
+    margin-left: 10px;
+}
