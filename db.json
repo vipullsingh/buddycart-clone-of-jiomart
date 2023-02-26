@@ -19,6 +19,7 @@
       "category": "bakery"
     },
     {
+
       "id": 3,
       "name": "Daawat Devaaya Basmati Rice 1 kg",
       "image": "https://www.jiomart.com/images/product/600x600/490005639/daawat-devaaya-basmati-rice-1-kg-product-images-o490005639-p490005639-0-202205172326.jpg",
@@ -28,6 +29,7 @@
       "category": "staple"
     },
     {
+
       "id": 4,
       "name": "Maggi 2-Minute Masala Instant Noodles 560 g",
       "image": "https://www.jiomart.com/images/product/600x600/490003834/maggi-2-minute-masala-instant-noodles-560-g-product-images-o490003834-p490003834-0-202203150702.jpg",
@@ -46,6 +48,7 @@
       "category": "dairy"
     },
     {
+
       "id": 6,
       "name": "Amul Fresh Paneer 200 g (Pack)",
       "image": "https://www.jiomart.com/images/product/600x600/490174895/amul-fresh-paneer-200-g-pack-product-images-o490174895-p490174895-0-202203170432.jpg",
@@ -111,6 +114,7 @@
       "category": "staple"
     },
     {
+
       "id": 13,
       "name": "Britannia Toastea Premium Bake Rusk 182 g",
       "image": "https://www.jiomart.com/images/product/600x600/490007738/britannia-toastea-premium-bake-rusk-182-g-product-images-o490007738-p490007738-0-202203170920.jpg",
@@ -120,6 +124,7 @@
       "category": "bakery"
     },
     {
+
       "id": 14,
       "name": "Parle Elaichi Rusk 400 g",
       "image": "https://www.jiomart.com/images/product/600x600/491419181/parle-elaichi-rusk-400-g-product-images-o491419181-p491419181-0-202203150801.jpg",
@@ -1104,6 +1109,7 @@
       "Mobile_No": "7004606171",
       "password": "Vips@2608",
       "id": 26
+
     }
   ],
   "checkout": []
