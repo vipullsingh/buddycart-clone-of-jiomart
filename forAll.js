@@ -1,18 +1,4 @@
 
-// console.log(fName)
-//                 signedInName.textContent = `Welcome ${fName}`;
-//                 signedInName.style.display = "block"
-
-//                 logout.style.display = "block"
-//                 signupBtn.style.display = "none"
-// let searchBar= document.getElementById("searchBar")
-
-// searchBar.addEventListener("submit",(e)=>{
-//     e.preventDefault()
-//     console.log(searchBar[0].value)
-// })
-
-
 window.addEventListener("load",()=>{
     let LoggedName = JSON.parse(localStorage.getItem("LoggedName"))
     console.log(LoggedName)

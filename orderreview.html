@@ -7,6 +7,7 @@
     <title>Buy Grocery Online at Best Prices Pan India</title>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/orderreview.css">
 </head>
 <body>
     <body>
@@ -24,23 +25,27 @@
                         </a>
                     </div>
                     <div id="location">
-                        <a href="#"><span><img src="graphics\location-icon.svg" alt=""></span> Deliver to <span
-                                style="font-weight: bolder;">Ranchi , 834001</span></a>
+                        <a href="#"><span><img src="graphics\location-icon.svg" alt=""></span> Deliver to <span style="font-weight: bolder;">Ranchi , 834001</span></a>
                     </div>
                 </div>
                 <div id="rightContent">
-                    <!-- <div class="search-container">
+                    <div class="search-container">
                         <i class="fa fa-search search-icon"></i>
                         <input type="text" placeholder="Search Your Item" class="search-box" />
-                        <button id="searchBtn">Search</button>
-                    </div> -->
+                        <div class="dropdown">
+                            <div class="dropdown-content">
+                                <a href="#">Search term 1</a>
+                                <a href="#">Search term 2</a>
+                                <a href="#">Search term 3</a>
+                            </div>
+                        </div>
+                        <i class="fa fa-key option-key"></i>
+                    </div>
                     <div id="cartLogo">
                         <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
                     </div>
                     <div id="signinWrapper">
-                        <h3 id="signedIn_Name"></h3>
-                        <a href="signup.html" id="signUpBtn"><span><img src="graphics\user-icon.svg" alt=""></span></a>
-                        <a id="logOutBtn" href=""><img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/logout/default/48px.svg" alt=""></a>
+                        <a href="signin.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
                     </div>
                 </div>
             </div>
@@ -152,45 +157,21 @@
             </ul>
         </nav>
     <div id="cart-div">
-        <h1>My Cart</h1>
+        <h1>Order Review</h1>
         <div id="grid-section">
             <div id="left">
                 <div>
-                    <h3>Groceries Basket</h3>
-                    <h3>₹<span class="order-total">0.00</span></h3>
+                    <h3>Address</h3>
+                    <!-- <h3>₹<span class="order-total">0.00</span></h3> -->
                 </div>
-                <div>
-                    <img src="./graphics/icons8-percentage-32.png" alt="">
-                    <p>Shop products worth ₹1499 & get extra 10% off on cart total(Offer is applicable only on products sold by Buddycart Retail . For specific exclusions & offer details refer T&C)</p>
+                <div id="address_card">
+                    <h5>Shubham Adhya</h5>
+                    <p>18, R.N.Road Subhasgram, Near Subhasgram Municipal Market,South 24 Parganas 700147, West Bengal Phone: 7980652143</p>
                 </div>
                 
             
                 <div id="products1">
-                    <!-- append products here -->
-                    <!-- <div class="card1">
-                        <div class="top">
-                            <div class="image-container">
-                                <img src="https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg">
-                            </div>
-                            <div class="product-details">
-                                <h4>Everest Green Stainless Steel Lighter</h4>
-                                <p>₹<span class="price1">59</span> <span class="sprice">₹99</span></p>
-                                <p>Sold By: Buddycart Retail</p>
-                            </div>
-                        </div>
-    
-                        <div class="bottom">
-                            <div>
-                                <a href="#" class="save-for-later">Save for Later</a>
-                            </div>
-                            <div class="quantity-manage">
-                                <button>-</button>
-                                <p>1</p>
-                                <button>+</button>
-                                <button class="remove">x</button>
-                            </div>
-                        </div>
-                    </div> -->
+                    
                     
                 </div>
                 
@@ -212,7 +193,7 @@
                         <p>Payment</p>
                     </div>
                 </div>
-                <div id="coupon-section">
+                <!-- <div id="coupon-section">
                     <div>
                         <h3>Apply Coupon</h3>
                         <button>View All</button>
@@ -222,7 +203,7 @@
                             <input type="text" placeholder="Enter Coupon Code" type="submit" id="Coupon">
                         </form>
                     </div>
-                </div>
+                </div> -->
                 <div id="payment-details">
                     <div>
                         <img src="./graphics/icons8-confetti-64.png" alt="">
@@ -231,32 +212,32 @@
                     <div>
                         <h3>Payment Details</h3>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h5>MRP Total</h5>
                         <p>₹<span class="order-total">0.00</span></p>
                     </div>
                     <div>
                         <h5>Product Discount</h5>
                         <p>₹<span id="discount">0.00</span></p>
-                    </div>
+                    </div> -->
                     <div>
                         <h5>Delivery Fee</h5>
                         <p>Free</p>
                     </div>
                     <div>
-                        <h5>Total</h5>
+                        <h5>Total Payable</h5>
                         <p>₹<span id="final_price">0.00</span></p>
                     </div>
                 </div>
                 <div>
-                    <a href="./orderreview.html"><button id="place-order-Btn" >Review Order</button></a>
+                    <a href="./checkout.html"><button id="place-order-Btn">Place Order</button></a>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="forAll.js"></script>
-<script src="./src/cart.js"></script>
 </html>
 
+<!-- <script src="./src/cart.js"></script> -->
+<script src="./src/orderreview.js"></script>
 

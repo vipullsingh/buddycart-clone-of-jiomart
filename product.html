@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css\style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
@@ -26,27 +26,23 @@
                     </a>
                 </div>
                 <div id="location">
-                    <a href="#"><span><img src="graphics\location-icon.svg" alt=""></span> Deliver to <span style="font-weight: bolder;">Ranchi , 834001</span></a>
+                    <a href="#"><span><img src="graphics\location-icon.svg" alt=""></span> Deliver to <span
+                            style="font-weight: bolder;">Ranchi , 834001</span></a>
                 </div>
             </div>
             <div id="rightContent">
                 <div class="search-container">
                     <i class="fa fa-search search-icon"></i>
                     <input type="text" placeholder="Search Your Item" class="search-box" />
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <a href="#">Search term 1</a>
-                            <a href="#">Search term 2</a>
-                            <a href="#">Search term 3</a>
-                        </div>
-                    </div>
-                    <i class="fa fa-key option-key"></i>
+                    <button id="searchBtn">Search</button>
                 </div>
                 <div id="cartLogo">
                     <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
                 </div>
                 <div id="signinWrapper">
-                    <a href="signin.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <h3 id="signedIn_Name"></h3>
+                    <a href="signup.html" id="signUpBtn"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <a id="logOutBtn" href=""><img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/logout/default/48px.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -308,5 +304,6 @@
         </div>
     </footer>
 </body>
+<script src="./forAll.js"></script>
 <script src="./main.js"></script>
 </html>
