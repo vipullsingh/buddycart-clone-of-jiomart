@@ -1,9 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
+body{
+    overflow-x: hidden;
+    /* width: 100vw; */
+    box-sizing: border-box;
+    
+}
+*{
+    margin: 0%;
+   padding: 0%;
+}
 
+body>div{
+    padding-right: 40px;
+}
 * {
     font-family: 'Poppins', sans-serif;
 }
-
+.MainCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 96%;
+    /* border: 2px solid black; */
+}
 header{
     display: flex;
     align-items: center;
@@ -134,23 +154,14 @@ header{
     color: white;
     padding-right: 12px;
 }
-
-
-
-
-
-
 /* ////hovererin */
-
-
-
 a {
-    font-size: 15px;
+    font-size: 0.93vw;
     text-transform: uppercase;
 }
 
 .nav-area {
-    background:#0078AD
+    background:#0C5273
 }
 
 .nav-area:after {
@@ -178,7 +189,8 @@ a {
 }
 
 .nav-area ul li:hover a {
-    background: #0079ad9c
+    background: #0C5273;
+    opacity: 0.9;
 }
 
 .nav-area ul ul {
@@ -195,7 +207,7 @@ a {
 }
 
 .nav-area ul ul li:hover a {
-    background:#0078AD;
+    background:#083d55;
 }
 
 .nav-area ul ul li {
@@ -248,6 +260,120 @@ a {
 
 @keyframes fade {
     100% { opacity: 1 }
+}
+
+.top>select:hover{
+    
+    border: 1px solid #0C5273;
+    opacity: 1;
+    animation: fade 2s linear;
+}
+
+/* Card Container */
+#cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    /* border: 2px solid red; */
+}
+
+/* cards */
+
+.card{
+    box-sizing: border-box;
+    padding: 10px;
+    height: 460px;
+    width: 300px;
+    border: 1px solid rgb(199, 199, 199);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-radius: 20px;
+    cursor: pointer;
+}
+.card>img{
+    align-self: center;
+    border-radius: inherit;
+    width: 90%;
+}
+.card>p{
+    color: grey;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+.card>button{
+    height: 35px;
+    align-self: center;
+    width: 80%;
+    background-color: #fff;
+    border:1px solid rgb(199, 199, 199);
+    border-radius: 15px;
+    font-weight: bolder;
+    color: #0C5273;
+}
+.card>button:hover{
+    border: 1px solid #0C5273;
+    animation: fade 2s linear;
+    cursor: pointer;
+}
+.stPrice{
+    margin: 0 10px 0 0;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stPrice>h3{
+    display: inline-block;
+    margin-left: 10px;
+    color: black;
+}
+.stPrice>p:nth-child(1){
+    text-decoration: line-through;
+}
+.stPrice>p:nth-child(3){
+    text-decoration: none;
+    color: white;
+}
+#container{
+    display: flex;
+}
+
+.left,.right{
+    box-sizing: border-box;
+}
+.left{
+    padding: 10px;
+    width: 20%;
+    /* border: 2px solid red; */
+}
+.right{
+    padding: 30px;
+    box-sizing: border-box;
+    width: 80%;
+    /* border: 2px solid blue; */
+}
+.right>.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top>select{
+    padding: 10px 25px 10px 20px;
+    line-height: 35px;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 20px;
+}
+.elementToFadeInAndOut {
+    opacity: 1;
+    animation: fade 2s linear;
+}
+
+
+@keyframes fade {
+    100% { opacity: 1 }
     50% { opacity: 0.5 }
 }
 
@@ -263,7 +389,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 /* cards */
@@ -403,4 +529,84 @@ footer a:hover{
 .dwnImg{
     display: flex;
     cursor: pointer;
+}
+#signUpPage{
+    display: flex;
+    height : 600;
+    /* border: 2px solid red; */
+}
+#signUpPage>div:nth-child(1){
+    width: 60%;
+    /* border: 2px solid black; */
+}
+#signUpPage>div:nth-child(1) img{
+    width: 100%;
+}
+#signUpPage>div:nth-child(2){
+    /* border: 2px solid black; */
+    width: 35%;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+#signUpPage>div:nth-child(2)>div{
+    /* border: 2px solid red; */
+    box-shadow: 0 0 15px 3px rgb(0 0 0 / 5%);
+    border-radius: 32px;
+    height: 550px;
+    margin: 72px 0 0;
+    padding: 64px 32px 0;
+}
+#signUpPage>div:nth-child(2)>div h1{
+        font-family: JioType,helvetica,arial,sans-serif;
+    font-weight: 900;
+    text-transform: none;
+    font-size: 2rem;
+    letter-spacing: -.96px;
+    line-height: 1;
+}
+#signUpPage>div:nth-child(2)>div p{
+    font-family: JioType,helvetica,arial,sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    font-size: .875rem;
+    letter-spacing: -.07px;
+    line-height: 1.4285714286;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#signUpPage>div:nth-child(2)>div input{
+    display: block;
+    width: 90%;
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: calc(var(--spacing-xs) + 1px);
+    background-color: #C9E2ED;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--color-primary-grey-80);
+    color: var(--color-primary-grey-100);
+    border-radius: 30;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+    font-family: JioType,helvetica,arial,sans-serif;
+    font-weight: 500;
+    text-transform: none;
+    font-size: 1rem;
+    letter-spacing: -.08px;
+    line-height: 2.2;
+}
+#signUpPage>div:nth-child(2)>div input{
+    margin-bottom: 8px;
+}
+#signupbutton{
+    margin-top: 20px;
+}
+#alreadySignin{
+    text-decoration: none;
+    color: #3293BD;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
