@@ -3,7 +3,7 @@ document.querySelector("#mynav").innerHTML=mynav()
 
 let userdata=JSON.parse(localStorage.getItem("user"))||[]
 
-function fsearch(){
+function fsearch(event){
     event.preventDefault()
     let query=document.querySelector("#query").value
     if(query=="electronics"){

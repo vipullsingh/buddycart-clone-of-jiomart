@@ -8,6 +8,9 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/landingPage.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" type="text/JavaScript"></script>
+    <script src="src\sweetalert.min.js" type="text/JavaScript"></script>
+
     <style>
         /* Style for labelForm class */
         .labelForm {
@@ -91,26 +94,22 @@
             <div id="rightContent">
                 <div class="search-container">
                     <i class="fa fa-search search-icon"></i>
-                    <input type="text" placeholder="Search Your Item" class="search-box" />
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <a href="#">Groceries</a>
-                            <a href="#">Furniture</a>
-                            <a href="#">iPhone</a>
-                        </div>
-                    </div>
-                    <i class="fa fa-key option-key"></i>
+                    <form id="searchBar" action="#">
+                        <input type="text" placeholder="Search Your Item" class="search-box" />
+                    </form>
+                    <!-- <button id="searchBtn">Search</button> -->
                 </div>
                 <div id="cartLogo">
                     <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
                 </div>
                 <div id="signinWrapper">
-                    <a href="signup.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <h3 id="signedIn_Name"></h3>
+                    <a href="signup.html" id="signUpBtn"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <a id="logOutBtn" href=""><img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/logout/default/48px.svg" alt=""></a>
                 </div>
             </div>
         </div>
     </header>
-
 
     <nav class="nav-area">
         <ul>
@@ -252,7 +251,15 @@
     </div>
 
 </body>
+<script src="./forAll.js"></script>
 <script>
+    // let searchBar= document.getElementById("searchBar")
+
+    // searchBar.addEventListener("submit",(e)=>{
+    //     e.preventDefault()
+    //     console.log(searchBar[0].value)
+    // })
+
     const form = document.getElementById('signup-form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -266,32 +273,15 @@
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        let data = {
-            name : nameInput.value,
-            email : emailInput.value,
-            Mobile_No : mobileInput.value,
-            password : passwordInput.value
-        }
-        // Validate email
-        if (!emailInput.checkValidity()) {
-            emailError.textContent = 'Please enter a valid email address.';
-            
-            return;
-        } else {
-            emailError.textContent = '';
-        }
 
         // Validate mobile number
         // console.log(typeof Number(mobileInput.value));
-        if (!mobileInput.checkValidity() || mobileInput.value.length !== 10 ) {
+        if (!mobileInput.checkValidity() || mobileInput.value.length !== 10) {
             // console.log('mobcheck')
             // console.log(Number(mobileInput.value))
             // console.log(mobileInput.value.length)
-            alert('Enter correct phone number')
-            mobileError.textContent = 'Please enter a valid 10-digit mobile number.';
+            alert('Please enter a valid 10-digit mobile number.')
             return;
-        } else {
-            mobileError.textContent = '';
         }
         // Validate password
         console.log(passwordRegex.test(passwordInput.value));
@@ -303,53 +293,31 @@
         } else {
             passwordError.textContent = '';
         }
-
-        // Check if password is significantly different from previous passwords
-        // const newPassword = passwordInput.value;
-        // const isSignificantlyDifferent = previousPasswords.every(function (oldPassword) {
-        //     const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
-        //     return similarity < 0.5;
-        // });
-        // if (!isSignificantlyDifferent) {
-        //     passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
-        //     return;
-        // } else {
-        //     passwordError.textContent = '';
-        //     previousPasswords.push(newPassword);
-        // }
-
+        let data = {
+            name: nameInput.value,
+            email: emailInput.value,
+            Mobile_No: mobileInput.value,
+            password: passwordInput.value
+        }
+        
         // Submit form
         console.log(data)
-        // alert('Signup successful!');
-        fetch("http://localhost:3000/RegisterUser",{
-            method : "POST",
-            headers : {
+        fetch("http://localhost:3000/RegisterUser", {
+            method: "post",
+            headers: {
                 "Content-Type": "application/json"
             },
-            body : JSON.stringify(data)
+            body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .then(result => {console.log("success",result)})
-        .catch(err => console.log(JSON.stringify(err)))
-        // postData("http://localhost:3000/RegisterUser",data)
-        // location.href = 'signin.html';
-    });
+            .then(response => response.json())
+            .then(result => {
+                console.log("success", result)
+            })
+            .catch(err => console.log(JSON.stringify(err)))
 
+            alert("Sign Up Successfull")
+        });
 
-
-//     async function postData(url = "", data = {}) {
-//   // Default options are marked with *
-//     const response = await fetch(url, {
-//         method: "POST", // *GET, POST, PUT, DELETE, etc.
-//          headers: {
-//         "Content-Type": "application/json",
-//         // 'Content-Type': 'application/x-www-form-urlencoded',
-//         },
-//         // redirect: "follow", // manual, *follow, error
-//         body: JSON.stringify(data), // body data type must match "Content-Type" header
-//     });
-//     return response.json(); // parses JSON response into native JavaScript objects
-//     }
 </script>
 
 </html>
