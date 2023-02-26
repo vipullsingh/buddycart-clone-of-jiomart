@@ -27,17 +27,28 @@ function datafetch(datafetch){
         divAdressOrder.setAttribute("class","address-ordeno")
          let h4ordernumber=document.createElement("h4")
          let pAddress=document.createElement("p")
-         h4ordernumber.innerText=element.OrderNO
-         pAddress.innerText=element.Address;
+         h4ordernumber.innerText=`Order-No:-${ element.OrderNO}`
+         pAddress.innerText=`Address:-${element.Address}`  ;
          let divproductname_quantity=document.createElement("div");
          divproductname_quantity.setAttribute("class","product-details")
          let divforproduct=document.createElement("div")
+         let h3forPNmae=document.createElement("h3")
+         let h4forquantity=document.createElement("h4")
+         h3forPNmae.innerText="Product-Name"
+         h4forquantity.innerText="Quantity"
+       
          let bag=[]
-           for(let i=0;i<=element.Product.length-1;i++){
-            bag.push(`<h4>${element.Product[i]}</h4><p>${element.Quantity[i]}</p>`)
-           }
+         for(let i=0;i<=element.Product.length-1;i++){
+             bag.push(`<h4>${element.Product[i]}</h4><p>${element.Quantity[i]}</p>`)
+            }
             console.log(bag)
-             divforproduct.innerHTML=bag.join('')
+           
+            divforproduct.innerHTML=bag.join('')
+                
+           
+                   
+           
+          
              divforproduct.setAttribute("class","divforall")
          divproductname_quantity.append(divforproduct)
          divAdressOrder.innerHTML=""
