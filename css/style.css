@@ -631,3 +631,10 @@ input::-webkit-inner-spin-button {
     'GRAD' 0,
     'opsz' 48
   }
+  .search-container{
+    display: flex;
+    align-items: center;
+}
+.search-container span{
+    margin-left: 10px;
+}
