@@ -112,3 +112,16 @@ a{
 #add-new-address:hover{
     background-color: #034e6e;
 }
+
+#addr{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+#addr input{
+    height: 30px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
