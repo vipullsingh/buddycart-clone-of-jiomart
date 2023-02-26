@@ -1,6 +1,27 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+// let cart = JSON.parse(localStorage.getItem("cart")) || []
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
-
+let cart=[
+    {
+        category:"staple",
+        id:1,
+        image: "https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg",
+        name: "onion",
+        price: 56,
+        quantity: 1,
+        stock:"In stock",
+        strikeprice: 66,
+    },
+    {
+        category:"staple",
+        id:2,
+        image: "https://www.jiomart.com/images/product/150x150/491377754/everest-green-stainless-steel-lighter-peeler-knife-set-3-pcs-product-images-o491377754-p491377754-0-202203170446.jpg",
+        name: "onion",
+        price: 56,
+        quantity: 1,
+        stock:"In stock",
+        strikeprice: 66,
+    },
+]
 // console.log(cart)
 let products1=document.getElementById("products1")
 let order_total=document.querySelectorAll(".order-total")
@@ -13,7 +34,7 @@ window.addEventListener("load",()=>{
     showcarddata(cart)
 })
 let totalprice=0
-let finalPrice=0
+let finalPrice=JSON.parse(localStorage.getItem("finalPrice")) || 0
 let productDiscount=0
 function showcarddata(cart){
     let cardList=cart.map((item)=>getCard(item.id,item.image,item.name,item.price,item.strikeprice,item.quantity,item.category,item.stock)).join("")
@@ -28,7 +49,7 @@ function showcarddata(cart){
     finalPrice=totalprice-Number(discount.innerText)
     
     final_price.textContent=Math.floor(finalPrice) 
-
+    localStorage.setItem("finalPrice",JSON.stringify(finalPrice))
     products1.innerHTML=cardList
 }
 
@@ -68,10 +89,11 @@ function getCard(id,image,name,price,sprice,quantity,category,stock){
 couponForm.addEventListener("submit",(e)=>{
     e.preventDefault()
     if(couponForm.Coupon.value=="buddy20"){
-        productDiscount=totalprice*0.2
-        discount.textContent=productDiscount
+        productDiscount=Math.floor(totalprice*0.2)
+        discount.textContent=(productDiscount)
         finalPrice=finalPrice-productDiscount
         final_price.textContent=finalPrice
+        localStorage.setItem("finalPrice",JSON.stringify(finalPrice))
     }
 })
 
