@@ -638,3 +638,14 @@ input::-webkit-inner-spin-button {
 .search-container span{
     margin-left: 10px;
 }
+#adminBtn{
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bolder;
+    background-color: #049fe2;
+    text-align: center;
+}
+#adminBtn:hover{
+    background-color: #0078AD;
+
+}
