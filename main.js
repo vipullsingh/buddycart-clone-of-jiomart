@@ -128,30 +128,18 @@ function display(data){
                 cart.push({...elem,quantity:1})
                 localStorage.setItem("cart",JSON.stringify(cart))
                 console.log("Added to the cart")
-                Swal.fire({
-                    title: '<strong>Added to Cart!</strong>',
-                    icon: 'success',
-                    html:
-                      'You are one step ahead of buying the Product!,  ' +
-                      '<a href="./cart.html"><p style="color: black; text-shadow: 2px; "><b>Go to Cart</b></p></a>' +
-                      '.',
-                    showCloseButton: true,
-                    // showCancelButton: true,
-                    focusConfirm: false
-                  })
+                Swal.fire(
+                    'Added to Cart!',
+                    'You are one step ahead of buying the Product!',
+                    'success'
+                )
             }else{
                 console.log("Already Present in the cart")
-                Swal.fire({
-                    title: '<strong> Already on the Cart! </strong>',
-                    icon: 'error',
-                    html:
-                      'Item is already present in the cart!,  ' +
-                      '<a href="./cart.html"><p style="color: black; text-shadow: 2px; "><b>Go to Cart</b></p></a>' +
-                      '.',
-                    showCloseButton: true,
-                    // showCancelButton: true,
-                    focusConfirm: false
-                  })
+                Swal.fire(
+                    'Item is already present in the cart!',
+                    'Go to the cart page!',
+                    'error'
+                )
             }
         })
 
