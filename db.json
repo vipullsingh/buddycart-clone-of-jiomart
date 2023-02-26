@@ -1097,33 +1097,12 @@
       "id": 26
     }
   ],
-<<<<<<< HEAD
   "checkout": [],
-=======
-  "checkout": [
-    {
-      "Product-name": [
-        "Mobile",
-        "laptop",
-        "Home appliances"
-      ],
-      "Quantity": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "Address": "Nagpur, Maharastra",
-      "TotalAmount": 47857,
-      "OrderStatus": "Successful"
-    }
-  ],
->>>>>>> ac6d0676cddc73bc0fa99778256829e1144f2013
   "LoginAdmin": [
     {
       "email": "admin",
       "password": "admin",
-      "name":"Adesh"
+      "name": "Adesh"
     }
   ]
 }
