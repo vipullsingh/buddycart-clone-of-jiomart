@@ -1092,10 +1092,25 @@
     {
       "name": "Vipul Kumar",
       "email": "vipul.kr.vks@gmail.com",
-      "Mobile_No": "9845994499",
-      "password": "Ahdfj@uyk6756",
-      "id": 1
+      "Mobile_No": "7004606171",
+      "password": "Vips@2698",
+      "id": 24
+    },
+    {
+      "name": "Vipul Kumar",
+      "email": "vipul.kr.vks@gmail.com",
+      "Mobile_No": "7004606171",
+      "password": "Vips@2608",
+      "id": 25
+    },
+    {
+      "name": "Vipul Kumar",
+      "email": "vipul.kr.vks@gmail.com",
+      "Mobile_No": "7004606171",
+      "password": "Vips@2608",
+      "id": 26
 
     }
-  ]
+  ],
+  "checkout": []
 }
