@@ -1084,12 +1084,9 @@
     }
   ],
   "RegisterUser": [
-    {
-      "name": "Vipul Kumar",
-      "email": "vipul.kr.vks@gmail.com",
-      "Mobile_No": "9845994499",
-      "password": "Ahdfj@uyk6756",
-      "id": 1
-    }
+    
+   ],
+  "checkout": [
+      
   ]
 }
