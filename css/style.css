@@ -1,12 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&display=swap');
 body{
     overflow-x: hidden;
+    /* width: 100vw; */
+    box-sizing: border-box;
+    
+}
+*{
+    margin: 0%;
+   padding: 0%;
+}
+
+body>div{
+    padding-right: 40px;
 }
 * {
     font-family: 'Poppins', sans-serif;
 }
 .MainCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
+    width: 96%;
+    /* border: 2px solid black; */
 }
 header{
     display: flex;
@@ -140,7 +156,7 @@ header{
 }
 /* ////hovererin */
 a {
-    font-size: 12px;
+    font-size: 0.93vw;
     text-transform: uppercase;
 }
 
@@ -584,4 +600,13 @@ footer a:hover{
 }
 #signupbutton{
     margin-top: 20px;
+}
+#alreadySignin{
+    text-decoration: none;
+    color: #3293BD;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -10,62 +10,60 @@
     <link rel="stylesheet" href="./css/landingPage.css">
     <style>
         /* Style for labelForm class */
-        .labelForm {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
+.labelForm {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.signup-form{
+    margin-top: 27px;
+}
 
-        .signup-form {
-            margin-top: 27px;
-        }
+/* Style for input fields */
+#text1, input[type="email"], input[type="tel"], input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* add some color to the input box border */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
 
-        /* Style for input fields */
-        #name,
-        input[type="email"],
-        input[type="number"],
-        input[type="password"] {
-            display: block;
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            /* add some color to the input box border */
-            outline: none;
-            transition: all 0.3s ease-in-out;
-        }
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="password"]:focus {
+  border-color: #0078AD;
+}
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="password"]:focus {
-            border-color: #0078AD;
-        }
+/* Style for phone number input field */
+#mobile {
+  position: relative;
+}
 
-        /* Style for phone number input field */
-        #mobile {
-            position: relative;
-        }
+#mobile:before {
+  content: "+91 ";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #333;
+  font-weight: bold;
+}
 
-        #mobile:before {
-            content: "+91 ";
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            color: #333;
-            font-weight: bold;
-        }
+/* Style for error messages */
+.error {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 
-        /* Style for error messages */
-        .error {
-            display: none;
-            color: red;
-            font-size: 12px;
-            margin-top: 5px;
-        }
+
+
+
+
     </style>
 </head>
 
@@ -223,133 +221,26 @@
             <img src="graphics\signupBanner.png" alt="">
         </div>
         <div>
-            <div>
+            <div style="height: 342px; margin-top: 62px;">
                 <h1>Sign in to BuddyCart</h1>
                 <p>to access your Addresses, Orders & Wishlist.</p>
-                <form id="signup-form" method="post" action="signin.html" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
+                <form id="signin-form" method="post" action="">
                     <label class="labelForm" for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <span id="email-error" class="error"></span>
 
-                    <label class="labelForm" for="mobile">Mobile Number:</label>
-                    <input type="number" id="mobile" name="mobile" required>
-                    <span id="mobile-error" class="error"></span>
-
                     <label class="labelForm" for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-                    <div id="password-error" class="error">asrhgarg</div>
+                    <span id="password-error" class="error"></span>
 
-                    <button id="signupbutton" type="submit"
-                        style="background-color: #0078AD; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Sign
-                        Up</button>
+                    <button id="signinbutton" type="submit" style="display: block; margin-top: 2px;background-color: #0078AD; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Sign In</button>
+                    <a id="alreadySignin" href="signup.html">Not Registered?</a>
                 </form>
-                <a id="alreadySignin" href="signin.html">Already Registered?</a>
-            </div>
+             </div>
         </div>
     </div>
-
 </body>
 <script>
-    const form = document.getElementById('signup-form');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const emailError = document.getElementById('email-error');
-    const mobileInput = document.getElementById('mobile');
-    const mobileError = document.getElementById('mobile-error');
-    const passwordInput = document.getElementById('password');
-    const passwordError = document.getElementById('password-error');
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
-    let previousPasswords = [];
-
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        let data = {
-            name : nameInput.value,
-            email : emailInput.value,
-            Mobile_No : mobileInput.value,
-            password : passwordInput.value
-        }
-        // Validate email
-        if (!emailInput.checkValidity()) {
-            emailError.textContent = 'Please enter a valid email address.';
-            
-            return;
-        } else {
-            emailError.textContent = '';
-        }
-
-        // Validate mobile number
-        // console.log(typeof Number(mobileInput.value));
-        if (!mobileInput.checkValidity() || mobileInput.value.length !== 10 ) {
-            // console.log('mobcheck')
-            // console.log(Number(mobileInput.value))
-            // console.log(mobileInput.value.length)
-            alert('Enter correct phone number')
-            mobileError.textContent = 'Please enter a valid 10-digit mobile number.';
-            return;
-        } else {
-            mobileError.textContent = '';
-        }
-        // Validate password
-        console.log(passwordRegex.test(passwordInput.value));
-        if (!passwordRegex.test(passwordInput.value)) {
-            passwordError.innerText = 'Please enter a password that meets the required criteria.';
-            console.log(passwordError.textContent);
-            alert('Please enter a password that meets the required criteria.')
-            return;
-        } else {
-            passwordError.textContent = '';
-        }
-
-        // Check if password is significantly different from previous passwords
-        // const newPassword = passwordInput.value;
-        // const isSignificantlyDifferent = previousPasswords.every(function (oldPassword) {
-        //     const similarity = stringSimilarity.compareTwoStrings(newPassword, oldPassword);
-        //     return similarity < 0.5;
-        // });
-        // if (!isSignificantlyDifferent) {
-        //     passwordError.textContent = 'Please choose a password that is significantly different from your previous passwords.';
-        //     return;
-        // } else {
-        //     passwordError.textContent = '';
-        //     previousPasswords.push(newPassword);
-        // }
-
-        // Submit form
-        console.log(data)
-        // alert('Signup successful!');
-        fetch("http://localhost:3000/RegisterUser",{
-            method : "POST",
-            headers : {
-                "Content-Type": "application/json"
-            },
-            body : JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {console.log("success",result)})
-        .catch(err => console.log(JSON.stringify(err)))
-        // postData("http://localhost:3000/RegisterUser",data)
-        // location.href = 'signin.html';
-    });
-
-
-
-//     async function postData(url = "", data = {}) {
-//   // Default options are marked with *
-//     const response = await fetch(url, {
-//         method: "POST", // *GET, POST, PUT, DELETE, etc.
-//          headers: {
-//         "Content-Type": "application/json",
-//         // 'Content-Type': 'application/x-www-form-urlencoded',
-//         },
-//         // redirect: "follow", // manual, *follow, error
-//         body: JSON.stringify(data), // body data type must match "Content-Type" header
-//     });
-//     return response.json(); // parses JSON response into native JavaScript objects
-//     }
+    
 </script>
-
 </html>
