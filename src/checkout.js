@@ -32,7 +32,7 @@ function createObj(status){
     });
     
     let obj={
-        "Product-name": productNameArr,
+        "Product": productNameArr,
         "Quantity": quantityArr,
         "OrderNO": Math.floor(100000000 + Math.random() * 900000000),
         "Address":"Nagpur,Maharashtra",

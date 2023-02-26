@@ -102,15 +102,6 @@
       "category": "bevrages"
     },
     {
-      "id": 13,
-      "name": "Britannia Toastea Premium Bake Rusk 182 g",
-      "image": "https://www.jiomart.com/images/product/600x600/490007738/britannia-toastea-premium-bake-rusk-182-g-product-images-o490007738-p490007738-0-202203170920.jpg",
-      "strikeprice": 35,
-      "price": 29,
-      "stock": "In stock",
-      "category": "bakery"
-    },
-    {
       "id": 14,
       "name": "Parle Elaichi Rusk 400 g",
       "image": "https://www.jiomart.com/images/product/600x600/491419181/parle-elaichi-rusk-400-g-product-images-o491419181-p491419181-0-202203150801.jpg",
@@ -1072,6 +1063,15 @@
       "price": 834,
       "stock": "In stock",
       "category": "fragrances"
+    },
+    {
+      "name": "Adesh Tayde ",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHN8ZW58MHx8MHx8&w=1000&q=80",
+      "strikeprice": "1000",
+      "price": "800",
+      "stock": "In Stock",
+      "category": "Electronics",
+      "id": 121
     }
   ],
   "RegisterUser": [
@@ -1083,15 +1083,12 @@
       "id": 24
     }
   ],
-  "checkout" : [
-   
-  ],
+  "checkout": [],
   "LoginAdmin": [
     {
       "email": "admin",
-      "password": "admin"
+      "password": "admin",
+      "name":"Adesh"
     }
-
   ]
-
 }

@@ -48,7 +48,8 @@ function display(data){
     let pdivst1=document.createElement("p")
     let pdivst2=document.createElement("p")
      divprice.setAttribute("class","stprice")
-     pdivst1=elem.strikeprice;
+     pdivst1=
+     `₹${elem.strikeprice}`;
      pdivst2=`${Math.floor(((elem.strikeprice-elem.price)/elem.strikeprice)*100)}% OFF`
      divprice.append(pdivst1,h3divstprice,pdivst2)
      pname.innerText=elem.name;

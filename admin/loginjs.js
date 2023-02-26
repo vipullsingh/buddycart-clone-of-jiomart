@@ -6,28 +6,30 @@
    }).catch((err)=>{
     console.log(err)
    })
-
+let 
    function functionfecthdata(data){
     console.log(data)
     let buttonlogin=document.getElementById("buttonlogin")
-    let Name=document.getElementById("name")
     let eml=document.getElementById("exampleInputEmail");
     let ps=document.getElementById("exampleInputPassword")
-     let Lsdata=[]
    buttonlogin.addEventListener("click",(e)=>{
     e.preventDefault()
     let flag=0
-    let name;
+  
+    let x=JSON.parse(localStorage.getItem("Name"))||"";
+  
       data.forEach((ele,index)=>{ 
         if(eml.value==ele.email&&ps.value==ele.password){
-           flag=1,name=ele.name;
-           return flag,name
-        }else{
-            flag=0
-            return flag
+           flag=1
+           
+           localStorage.setItem("Name",JSON.stringify(ele.name))
+           return flag,x
         }
        })
+      
+      
        if(flag==1){
+        
          window.location.assign("./Dashboard.html")
        } else if(flag==0){
         Swal.fire('Invalid...', 'You failed!', 'error')

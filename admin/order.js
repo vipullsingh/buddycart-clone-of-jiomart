@@ -22,6 +22,7 @@ function datafetch(datafetch){
         card.setAttribute("class","card");
         let h2ordersdata=document.createElement("h2")
         h2ordersdata.innerText=element.OrderStatus
+        h2ordersdata.setAttribute("class","successmsg")
         let divAdressOrder=document.createElement("div")
         divAdressOrder.setAttribute("class","address-ordeno")
          let h4ordernumber=document.createElement("h4")
@@ -37,20 +38,23 @@ function datafetch(datafetch){
            }
             console.log(bag)
              divforproduct.innerHTML=bag.join('')
+             divforproduct.setAttribute("class","divforall")
          divproductname_quantity.append(divforproduct)
          divAdressOrder.innerHTML=""
          divAdressOrder.append(h4ordernumber,pAddress)
          let divAmount=document.createElement("div")
-         let ptottal=document.createElement("p")
+         let ptottal=document.createElement("h3")
          ptottal.innerText="Total Amount"
-         let pAmount=document.createElement("p")
-         pAmount.innerText=element.TotalAmount
+         let pAmount=document.createElement("h3")
+         pAmount.innerText=`₹${element.TotalAmount}`
          divAmount.append(ptottal,pAmount)
+         divAmount.setAttribute("class","ammountdiv")
          let deletebutton=document.createElement("button");
          deletebutton.innerText="Delete Order"
+         deletebutton.setAttribute("class","buttondelete")
          deletebutton.addEventListener("click",(e)=>{
             e.preventDefault()
-            functionfordeletereq(elem)
+            functionfordeletereq(element.id)
          })
          card.append(h2ordersdata,divAdressOrder,divproductname_quantity,divAmount,deletebutton)
          product.append(card)
@@ -81,11 +85,12 @@ formdata.addEventListener("search",(e)=>{
 
 
 function functionfordeletereq(elem){
-    fetch(`http://localhost:3000/data/${elem.id}`,{
+    fetch(`http://localhost:3000/checkout/${elem}`,{
         method:"DELETE",
         headers:{
             "Content-Type":"application/json"
         },
     })
 }
-fetch(`https://dummy.restapiexample.com/api/v1/employees`).then((res)=>{console.log(res)})
+
+
