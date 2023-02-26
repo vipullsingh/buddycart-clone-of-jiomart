@@ -272,6 +272,7 @@
     font-size: 17px;
     letter-spacing: 1px;
     cursor: pointer;
+    margin: 5px;
 }
 #place-order-Btn:hover{
     background-color: #034e6e;

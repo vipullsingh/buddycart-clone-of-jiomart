@@ -54,15 +54,15 @@
             <div id="right">
                 <div id="CRP">
                     <div>
-                        <button>1</button>
+                        <a href="./cart.html"><button>1</button></a>
                         <p>Your Cart</p>
                     </div>
                     <div>
-                        <button>2</button>
+                        <a href="./orderreview.html"><button>2</button></a>
                         <p>Order Review</p>
                     </div>
                     <div>
-                        <button>3</button>
+                        <a href="./checkout.html"><button>3</button></a>
                         <p>Payment</p>
                     </div>
                 </div>
@@ -77,9 +77,8 @@
                         <div class="cvv">
                             <h3>CVV</h3>
                             <div class="input-field">
-                                <input id="password" type="password" placeholder="Enter  Number" />
+                                <input id="password" type="password" placeholder="Enter Number" />
                             </div>
-                            <p id="in_pass"></p>
                         </div>
                         
                     </div>
@@ -89,7 +88,6 @@
                             <div class="input-field">
                                 <input id="card_number" type="text" placeholder="Enter Your Card Number Here" />
                             </div>
-                            <p id="in_nm"></p>
                         </div>
                     </div>
                     <div class="third-row">
@@ -128,11 +126,14 @@
                                 <img src="https://utils.imimg.com/payments/pwim_files/pwim_modes_v5.png" />
                             </div>
                         </div>
-                        <p id="exp"></p>
+                    </div>
+                    <div class="fourth-row">
+                        <h3>Total Payable: ₹<span id="final_price"></span></h3>
                     </div>
                 </div>
                 <div>
                     <button id="place-order-Btn" class="Pay-now">Pay Now</button>
+                    <button id="place-order-Btn" class="COD">Cash On Delivery</button>
                 </div>
             </div>
         </div>
@@ -142,3 +143,5 @@
 </body>
 <script src="forAll.js"></script>
 </html>
+
+<script src="./src/checkout.js"></script>
