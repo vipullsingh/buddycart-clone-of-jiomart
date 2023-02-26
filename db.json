@@ -102,15 +102,6 @@
       "category": "bevrages"
     },
     {
-      "id": 12,
-      "name": "Closeup Everfresh+ Red Hot Gel Toothpaste 150 g (Pack of 2)",
-      "image": "https://www.jiomart.com/images/product/600x600/490008332/closeup-everfresh-red-hot-gel-toothpaste-150-g-pack-of-2-product-images-o490008332-p490008332-0-202206222347.jpg",
-      "strikeprice": 176,
-      "price": 117,
-      "stock": "In stock",
-      "category": "staple"
-    },
-    {
       "id": 13,
       "name": "Britannia Toastea Premium Bake Rusk 182 g",
       "image": "https://www.jiomart.com/images/product/600x600/490007738/britannia-toastea-premium-bake-rusk-182-g-product-images-o490007738-p490007738-0-202203170920.jpg",
@@ -1084,9 +1075,23 @@
     }
   ],
   "RegisterUser": [
-    
-   ],
-  "checkout": [
-      
+    {
+      "name": "Vipul Kumar",
+      "email": "vipul.kr.vks@gmail.com",
+      "Mobile_No": "7004606171",
+      "password": "Vips@2608",
+      "id": 24
+    }
+  ],
+  "checkout" : [
+   
+  ],
+  "LoginAdmin": [
+    {
+      "email": "admin",
+      "password": "admin"
+    }
+
   ]
+
 }

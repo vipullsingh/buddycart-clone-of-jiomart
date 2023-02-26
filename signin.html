@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/landingPage.css">
     <style>
@@ -59,8 +59,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
   font-size: 12px;
   margin-top: 5px;
 }
-
-
+#signedIn_Name{
+    display: none;
+}
+#logOutBtn{
+    display: none;
+}
 
 
 
@@ -87,23 +91,18 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
                 </div>
             </div>
             <div id="rightContent">
-                <div class="search-container">
+                <!-- <div class="search-container">
                     <i class="fa fa-search search-icon"></i>
                     <input type="text" placeholder="Search Your Item" class="search-box" />
-                    <div class="dropdown">
-                        <div class="dropdown-content">
-                            <a href="#">Groceries</a>
-                            <a href="#">Furniture</a>
-                            <a href="#">iPhone</a>
-                        </div>
-                    </div>
-                    <i class="fa fa-key option-key"></i>
-                </div>
+                    <button id="searchBtn">Search</button>
+                </div> -->
                 <div id="cartLogo">
                     <a href="cart.html"><img src="graphics\cart-icon.svg" alt="" /></a>
                 </div>
                 <div id="signinWrapper">
-                    <a href="signup.html"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <h3 id="signedIn_Name"></h3>
+                    <a href="signup.html" id="signUpBtn"><span><img src="graphics\user-icon.svg" alt=""></span></a>
+                    <a id="logOutBtn" href=""><img src="https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/logout/default/48px.svg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -224,7 +223,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
             <div style="height: 342px; margin-top: 62px;">
                 <h1>Sign in to BuddyCart</h1>
                 <p>to access your Addresses, Orders & Wishlist.</p>
-                <form id="signin-form" method="post" action="">
+                <form id="signin-form" method="post">
                     <label class="labelForm" for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     <span id="email-error" class="error"></span>
@@ -240,7 +239,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
         </div>
     </div>
 </body>
-<script>
-    
-</script>
+<script src="login.js"></script>
+<script src="forAll.js"></script>
 </html>
