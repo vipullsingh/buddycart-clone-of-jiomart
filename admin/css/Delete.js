@@ -73,6 +73,7 @@ function functionfordeletereq(elem){
             "Content-Type":"application/json"
         },
     })
+     forapi(api)
 }
 // function getcard(name,img,price,stPrice){
 //     return `<div class="card"><img src="${img}" alt="image">
