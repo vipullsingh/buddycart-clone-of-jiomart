@@ -3,7 +3,7 @@
 
 BuddyCart is a group project that was developed using HTML, CSS, JavaScript, and JSON. It is an e-commerce platform that allows users to shop for their favorite items online. The project's primary goal was to provide a user-friendly interface that would allow customers to easily browse and purchase items.
 
-[Live Demo](https://dirty-quilt-1530.netlify.app/)
+[Live Demo](https://dirty-quilt-1530.netlify.app/) https://dirty-quilt-1530.netlify.app/
 
 
 
